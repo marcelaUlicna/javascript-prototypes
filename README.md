@@ -1,1 +1,1 @@
-# javascript-prototypes
+# prototypes
