@@ -7,38 +7,59 @@
     <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="container">
-        <h3>My projects</h3>
-        <hr>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">jQuery plugins</div>
-                    <div class="list-group">
-                        <a href="numericSpiner.html" class="list-group-item">
-                            <h4 class="list-group-item-heading">Numeric spiner</h4>
-                            <p class="list-group-item-text">
-                                This is jQuery plugin to allows users simply increase and decrease the number value in input field.
-                                It is supported changing value by scrolling. TypeScript version is also available.
+    <div class="container">   
+            <div class="navbar-collapse collapse" style="border-bottom: 1px solid #ccc;">
+                <ul class="nav navbar-nav">
+                  <li><h2>Components</h2></li>
+                </ul>
+                <div class="navbar-right navbar-buttons" style="margin-top: 20px;">
+                    <a href="index.html" rel="tooltip" class="btn btn-default btn-sm" style="border-radius: 50%;" data-toggle="tooltip" data-placement="bottom" title="Home page"><i class="glyphicon glyphicon-home"></i></a>
+                </div>
+              </div>
+            
+            
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-9">
+                  <p style="margin-top: 10px;">
+                    View on github: <a href="https://github.com/marcelaUlicna/prototypes">https://github.com/marcelaUlicna/prototypes</a>
+                  </p>
+                
+                  <h3 id="jquery">jQuery plugins</h3>
+                     <ul>
+                      <li>
+                           <a href="numericSpiner.html" >
+                            <h4 class="list-group-item-heading">Numeric spinner</h4>
+                            </a>
+                            <p class="gh-pages-main">
+                                This is jQuery plugin allow users simply increase and decrease a number value at input field.
+                                There is supported changing value by scrolling. TypeScript version is also available.
+                                <br />
                             </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="panel panel-success">
-                    <div class="panel-heading">TypeScript projects</div>
-                    <div class="panel-body">
-                        <p>
-                            <i>There are not any projects yet.</i>
-                        </p>
-                    </div>
-                </div>
-            </div>
+                        
+                      </li>
+                     </ul>
+                  <h3 id="typescript">TypeScript project</h3>
 
+                  <h3 id="other">Other</h3>
+                  <p style="width: 300px;">
+    
+                </div>
+                
+                <div class="col-md-3">
+                  <div data-spy="affix">
+                    <div id="affix" class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+                      <ul class="nav bs-docs-sidenav">
+                        <li><a href="#jquery">jQuery plugins</a></li>
+                        <li><a href="#typescript">TypeScript project</a></li>
+                        <li><a href="#other">Other</a></li>
+                    </ul>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>  
         </div>
-    </div>
 
     <script src="bootstrap/js/jquery-2.1.1.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>

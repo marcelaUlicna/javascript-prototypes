@@ -1,64 +1,50 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
-  <head lang="en">
+<head lang="en">
     <meta charset="UTF-8">
-    <title>Numeric spiner</title>
-      <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
-      <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
-      <link href="assets/css/numeric.spiner.css" rel="stylesheet">
-  </head>
-  <body>
-        <div class="container">
-            <div style="margin: 10px 0">
-                <a href="index.html" class="btn btn-primary">Home</a>
-            </div>
-            <h3>Numeric spiner</h3>
-            <hr>
-            <div class="row">
-                <div class="col-md-3">
-                    Component with default settings
-                    <pre>
-$("#spiner2").spiner();
-
-
-
-
-                    </pre>
+    <title></title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="assets/css/numeric.spiner.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">   
+            <div class="navbar-collapse collapse" style="border-bottom: 1px solid #ccc;">
+                <ul class="nav navbar-nav">
+                  <li><h2>Numeric spinner</h2></li>
+                </ul>
+                <div class="navbar-right navbar-buttons" style="margin-top: 20px;">
+                    <a href="index.html" rel="tooltip" class="btn btn-default btn-sm" style="border-radius: 50%;" data-toggle="tooltip" data-placement="bottom" title="Home page"><i class="glyphicon glyphicon-home"></i></a>
                 </div>
-                <div class="col-md-3">
-                    <input type="text" id="spiner2" value="13" style="margin-top: 20px;">
+              </div>
+            
+            
+            <div>
+		<div style="margin-top: 20px;">
+                  <p>Component with default settings</p>
+                  <div>
+                    <input type="text" id="spiner2" value="13">
+                  </div>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-3">
-                    Component with custom settings
-                    <pre>
-$("#spiner").spiner({
-    scrollable: true,
-    step: 0.02,
-    precision: 2
-});
-                    </pre>
+                
+                <div style="margin-top: 20px;">
+                  <p>Component with custom settings - click to input field and try to scroll up and down</p>
+                  <div>
+                    <input type="text" id="spiner" value="16.2">
+                  </div>
                 </div>
-                <div class="col-md-3">
-                    <input type="text" id="spiner" value="16.2" style="margin-top: 20px;">
+                
+                <div style="margin-top: 20px;">
+                  <p>Component with TypeScript</p>
+                  <div>
+                    <input type="text" id="spinerPlugin" value="6">
+                  </div>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-3">
-			Component with TypeScript
-		</div>
-                <div class="col-md-3">
-                    <input type="text" id="spinerPlugin" value="6" style="margin-top: 20px;">
-                </div>
-            </div>
+	    </div>
+              
         </div>
 
-
-
-        <script src="bootstrap/js/jquery-2.1.1.js"></script>
+	<script src="bootstrap/js/jquery-2.1.1.js"></script>
         <script src="bootstrap/js/jquery.mousewheel.js"></script>
         <script src="assets/js/numeric.spiner.js"></script>
         <script src="assets/js/numeric.plugin.js"></script>
@@ -80,6 +66,5 @@ $("#spiner").spiner({
 	  });
       })();
   </script>
-
-  </body>
+</body>
 </html>
