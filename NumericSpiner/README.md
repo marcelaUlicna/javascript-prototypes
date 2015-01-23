@@ -1,6 +1,6 @@
 # Numeric spiner
 
-This is jQuery plugin allow users simply increase and decrease a number value at input field. There is supported changing value by scrolling. Component is written as jQuery plugin as well as TypeScript plugin.
+This is jQuery plugin allow users simply increase and decrease a number value at input field. Moreover, there is supported changing value by scrolling the mouse wheel. Component is written as jQuery plugin as well as TypeScript plugin.
 
 ### Requirements
 * bootstrap.css
