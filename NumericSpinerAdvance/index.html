@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/bootstrap-theme.css" rel="stylesheet"/>
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="numeric.spiner.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="navbar-collapse collapse" style="border-bottom: 1px solid #ccc;">
+        <ul class="nav navbar-nav">
+            <li><h2>Plugin title</h2></li>
+        </ul>
+        <div class="navbar-right navbar-buttons" style="margin-top: 20px;">
+            <a href="index.html" rel="tooltip" class="btn btn-default btn-sm" style="border-radius: 50%;"
+               data-toggle="tooltip" data-placement="bottom" title="Home page"><i class="glyphicon glyphicon-home"></i></a>
+        </div>
+    </div>
+
+
+    <div style="padding: 10px 0;">
+        <p>
+            Numeric picker
+            <input type="text" id="spinner" value="10">
+        </p>
+
+        <p>
+            Date picker
+            <input type="text" id="spinner2" value="2/10/2014">
+        </p>
+
+        <p>
+            Time picker
+            <input type="text" id="spinner3" value="10:22:00 AM">
+        </p>
+
+        <p>
+            Date timee picker
+            <input type="text" id="spinner4" value="2/10/2014 10:22:00 AM">
+        </p>
+
+    </div>
+
+</div>
+
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+<script src="js/moment.js"></script>
+<script src="numeric.spinner.advance.js"></script>
+
+<script type="text/javascript">
+    (function () {
+        var spinner = new Numeric.Spinner($("#spinner"), {
+            step: 10,
+            spinnerType: Numeric.NumberSpinner,
+            width: 200,
+            scrollable: true
+        });
+
+        var spinner2 = new Numeric.Spinner($("#spinner2"), {
+            spinnerType: Numeric.DateSpinner,
+            width: 200,
+            scrollable: true
+        });
+
+        var spinner3 = new Numeric.Spinner($("#spinner3"), {
+            spinnerType: Numeric.TimeSpinner,
+            width: 200,
+            scrollable: true,
+            stepUnit: "minutes",
+            step: 10
+        });
+
+        var spinner4 = new Numeric.Spinner($("#spinner4"), {
+            spinnerType: Numeric.DateTimeSpinner,
+            width: 200,
+            scrollable: true,
+            stepUnit: "hours"
+        });
+    })();
+</script>
+</body>
+</html>
