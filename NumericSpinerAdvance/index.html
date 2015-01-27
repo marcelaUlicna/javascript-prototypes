@@ -28,8 +28,18 @@
         </p>
 
         <p>
+            Numeric picker percentage
+            <input type="text" id="spinner5" value="10"> <span style="margin-left: 10px;">%</span>
+        </p>
+
+        <p>
             Date picker
             <input type="text" id="spinner2" value="2/10/2014">
+        </p>
+
+        <p>
+            Date picker range
+            <input type="text" id="spinner6" value="2/10/2014"> <span style="margin-left: 10px;">2/10/2014 - 3/10/2014</span>
         </p>
 
         <p>
@@ -38,8 +48,18 @@
         </p>
 
         <p>
+            Time picker range
+            <input type="text" id="spinner7" value="10:22:00 PM"> <span style="margin-left: 10px;">10:00:00 PM - 11:00:00 PM</span>
+        </p>
+
+        <p>
             Date timee picker
             <input type="text" id="spinner4" value="2/10/2014 10:22:00 AM">
+        </p>
+
+        <p>
+            Date timee picker range
+            <input type="text" id="spinner8" value="2/10/2014 10:22:00 PM"> <span style="margin-left: 10px;">2/10/2014 10:00:00 PM - 2/20/2014 11:00:00 PM</span>
         </p>
 
     </div>
@@ -60,10 +80,27 @@
             scrollable: true
         });
 
+        var spinner5 = new Numeric.Spinner($("#spinner5"), {
+            step: 10,
+            spinnerType: Numeric.NumberSpinner,
+            width: 200,
+            scrollable: true,
+            min: 0,
+            max: 100
+        });
+
         var spinner2 = new Numeric.Spinner($("#spinner2"), {
             spinnerType: Numeric.DateSpinner,
             width: 200,
             scrollable: true
+        });
+
+        var spinner6 = new Numeric.Spinner($("#spinner6"), {
+            spinnerType: Numeric.DateSpinner,
+            width: 200,
+            scrollable: true,
+            min: "2/10/2014",
+            max: "3/10/2014"
         });
 
         var spinner3 = new Numeric.Spinner($("#spinner3"), {
@@ -74,11 +111,30 @@
             step: 10
         });
 
+        var spinner7 = new Numeric.Spinner($("#spinner7"), {
+            spinnerType: Numeric.TimeSpinner,
+            width: 200,
+            scrollable: true,
+            stepUnit: "minutes",
+            step: 10,
+            min: "10:00:00 PM",
+            max: "11:00:00 PM"
+        });
+
         var spinner4 = new Numeric.Spinner($("#spinner4"), {
             spinnerType: Numeric.DateTimeSpinner,
             width: 200,
             scrollable: true,
             stepUnit: "hours"
+        });
+
+        var spinner8 = new Numeric.Spinner($("#spinner8"), {
+            spinnerType: Numeric.DateTimeSpinner,
+            width: 200,
+            scrollable: true,
+            stepUnit: "hours",
+            min: "2/10/2014 10:00:00 PM",
+            max: "2/20/2014 11:00:00 PM"
         });
     })();
 </script>

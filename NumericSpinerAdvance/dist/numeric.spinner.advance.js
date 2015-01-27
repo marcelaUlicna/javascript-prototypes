@@ -87,6 +87,28 @@ var Numeric;
         SpinnerEvents.prototype.changeValue = function (direction) {
             throw "Virtual method";
         };
+        /**
+         * Method checks whether value is between minimal and maximal
+         * value if min or max option is defined.
+         * Date time pickers only.
+         *
+         * @method checkRange
+         * @param {string} min - Minimal value
+         * @param {string} max - Maximal value
+         * @param {string} format - Date/time format for correct comparing date/time value
+         * @param {any} value - Actual value
+         *
+         * @returns {any}
+         */
+        SpinnerEvents.prototype.checkRange = function (min, max, format, value) {
+            if (min && value.format(format) < min) {
+                value = moment(min, format);
+            }
+            if (max && value.format(format) > max) {
+                value = moment(max, format);
+            }
+            return value;
+        };
         return SpinnerEvents;
     })();
     Numeric.SpinnerEvents = SpinnerEvents;
@@ -96,17 +118,27 @@ var Numeric;
     *
     * @class NumberSpinner
     * @extends {SpinnerEvents}
+    * @param {number} - Minimal value
+    * @param {number} - Maximal value
     *
     * */
     var NumberSpinner = (function (_super) {
         __extends(NumberSpinner, _super);
         function NumberSpinner(spinner) {
             _super.call(this, spinner);
+            if (!isNaN(spinner.min)) {
+                this.min = Number(spinner.min);
+            }
+            if (!isNaN(spinner.max)) {
+                this.max = Number(spinner.max);
+            }
         }
         /**
          * In class that provides functionality for NUMBER values.
          * This function changes value based on direction and step
          * and rounds value according to precision.
+         * In case minimal or maximal value is defined, there is the check
+         * if actual value is between min and max.
          *
          * @override
          * @method changeValue
@@ -119,6 +151,12 @@ var Numeric;
             }
             else {
                 value -= step;
+            }
+            if (this.min !== undefined && value < this.min) {
+                value = this.min;
+            }
+            else if (this.max !== undefined && value > this.max) {
+                value = this.max;
             }
             this.value = value.toFixed(precision);
             this.spinner.inputElement.val(this.value);
@@ -137,17 +175,26 @@ var Numeric;
      *
      * @class NumberSpinner
      * @extends {SpinnerEvents}
+     * @param {number} - Minimal value
+     * @param {number} - Maximal value
      *
      * */
     var DateSpinner = (function (_super) {
         __extends(DateSpinner, _super);
         function DateSpinner(spinner) {
             _super.call(this, spinner);
+            this.formatCompare = "YYYY-MM-DD";
             if (!spinner.dateFormat) {
                 spinner.dateFormat = "MM/DD/YYYY";
             }
             if (!spinner.stepUnit) {
                 spinner.stepUnit = "days";
+            }
+            if (spinner.min) {
+                this.min = moment(spinner.min, spinner.dateFormat).format(this.formatCompare);
+            }
+            if (spinner.max) {
+                this.max = moment(spinner.max, spinner.dateFormat).format(this.formatCompare);
             }
         }
         /**
@@ -177,6 +224,7 @@ var Numeric;
             else {
                 momentDate.subtract(step, unit);
             }
+            momentDate = this.checkRange(this.min, this.max, this.formatCompare, momentDate);
             this.value = momentDate.format(format);
             this.spinner.inputElement.val(this.value);
         };
@@ -194,17 +242,26 @@ var Numeric;
      *
      * @class NumberSpinner
      * @extends {SpinnerEvents}
+     * @param {number} - Minimal value
+     * @param {number} - Maximal value
      *
      * */
     var TimeSpinner = (function (_super) {
         __extends(TimeSpinner, _super);
         function TimeSpinner(spinner) {
             _super.call(this, spinner);
+            this.formatCompare = "H:mm:ss";
             if (!spinner.dateFormat) {
                 spinner.dateFormat = "h:mm:ss A";
             }
             if (!spinner.stepUnit) {
                 spinner.stepUnit = "hours";
+            }
+            if (spinner.min) {
+                this.min = moment(spinner.min, spinner.dateFormat).format(this.formatCompare);
+            }
+            if (spinner.max) {
+                this.max = moment(spinner.max, spinner.dateFormat).format(this.formatCompare);
             }
         }
         /**
@@ -232,6 +289,7 @@ var Numeric;
             else {
                 momentDate.subtract(step, unit);
             }
+            momentDate = this.checkRange(this.min, this.max, this.formatCompare, momentDate);
             this.value = momentDate.format(format);
             this.spinner.inputElement.val(this.value);
         };
@@ -268,17 +326,26 @@ var Numeric;
      *
      * @class NumberSpinner
      * @extends {SpinnerEvents}
+     * @param {number} - Minimal value
+     * @param {number} - Maximal value
      *
      * */
     var DateTimeSpinner = (function (_super) {
         __extends(DateTimeSpinner, _super);
         function DateTimeSpinner(spinner) {
             _super.call(this, spinner);
+            this.formatCompare = "YYYY-MM-DD H:mm:ss";
             if (!spinner.dateFormat) {
                 spinner.dateFormat = "MM/DD/YYYY h:mm:ss A";
             }
             if (!spinner.stepUnit) {
                 spinner.stepUnit = "days";
+            }
+            if (spinner.min) {
+                this.min = moment(spinner.min, spinner.dateFormat).format(this.formatCompare);
+            }
+            if (spinner.max) {
+                this.max = moment(spinner.max, spinner.dateFormat).format(this.formatCompare);
             }
         }
         /**
@@ -309,6 +376,7 @@ var Numeric;
             else {
                 momentDate.subtract(step, unit);
             }
+            momentDate = this.checkRange(this.min, this.max, this.formatCompare, momentDate);
             this.value = momentDate.format(format);
             this.spinner.inputElement.val(this.value);
         };
@@ -339,6 +407,8 @@ var Numeric;
      * @param {string} value - Input value
      * @param {string} dateFormat - Custom format of date and/or time based on moment.js component
      * @param {string} stepUnit - This defines which unit (day, hour...) should be used for changing value
+     * @param {any} min - Minimal value
+     * @param {any} max - Maximal value
      */
     var Spinner = (function () {
         function Spinner(el, options) {
@@ -380,6 +450,7 @@ var Numeric;
          *
          * @function render
          * @static
+         * @returns {jQuery}
          */
         NumericButton.render = function (direction, icon) {
             return $('<button class="btn btn-default" data-direction="' + direction + '"><i class="' + icon + '"></i></button>');

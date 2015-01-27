@@ -26,6 +26,8 @@ module Numeric {
         width: number;
         dateFormat: string;
         stepUnit: string;
+        min: any;
+        max: any;
     }
 
     /**
@@ -44,6 +46,8 @@ module Numeric {
      * @param {string} value - Input value
      * @param {string} dateFormat - Custom format of date and/or time based on moment.js component
      * @param {string} stepUnit - This defines which unit (day, hour...) should be used for changing value
+     * @param {any} min - Minimal value
+     * @param {any} max - Maximal value
      */
     export class Spinner implements ISpinner{
         inputElement: JQuery;
@@ -56,6 +60,8 @@ module Numeric {
         value: string;
         dateFormat: string;
         stepUnit: string;
+        min: any;
+        max: any;
 
         constructor(el: JQuery, options: ISpinner) {
             $.extend(this, options);
@@ -95,6 +101,7 @@ module Numeric {
          *
          * @function render
          * @static
+         * @returns {jQuery}
          */
         static render(direction, icon): JQuery {
             return $('<button class="btn btn-default" data-direction="' + direction +'"><i class="' + icon + '"></i></button>');
