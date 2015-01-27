@@ -21,6 +21,8 @@ var Numeric;
      * @param {string} value - Input value
      * @param {string} dateFormat - Custom format of date and/or time based on moment.js component
      * @param {string} stepUnit - This defines which unit (day, hour...) should be used for changing value
+     * @param {any} min - Minimal value
+     * @param {any} max - Maximal value
      */
     var Spinner = (function () {
         function Spinner(el, options) {
@@ -62,6 +64,7 @@ var Numeric;
          *
          * @function render
          * @static
+         * @returns {jQuery}
          */
         NumericButton.render = function (direction, icon) {
             return $('<button class="btn btn-default" data-direction="' + direction + '"><i class="' + icon + '"></i></button>');

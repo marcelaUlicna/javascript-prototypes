@@ -4,15 +4,26 @@
 /// <reference path="typing/jquery.d.ts" />
 /// <reference path="typing/moment.d.ts" />
 /// <reference path="Spinner.ts" />
-var __extends = this.__extends || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
-};
-var Numeric;
-(function (Numeric) {
+
+module Numeric {
     var interval;
+
+    /**
+     * Interface for all spinner events.
+     *
+     * @inteface IEvents
+     * @param {JQueryEventObject} mousedown - Mousedown event
+     * @param {JQueryEventObject} mouseup - Mouseup event
+     * @param {JQueryEventObject} mousewheel - Mousewheel event
+     * @param {string} changeValue - Increases or decreases input value
+    */
+    interface IEvents {
+        mousedown(e: JQueryEventObject): void;
+        mouseup(e: JQueryEventObject): void;
+        mousewheel(e: JQueryEventObject): void;
+        changeValue(direction: string): void;
+    }
+
     /**
      * Base class that implements IEvents interface. It provides basic implementation
      * of all events. It contains virtual method "changeValue" which is overridden
@@ -26,14 +37,19 @@ var Numeric;
      * @param {string} value - Input value
      * @param {boolean} startDown - Private property that identifies whether mouse down is holding
     */
-    var SpinnerEvents = (function () {
-        function SpinnerEvents(spinner) {
-            var _this = this;
-            this.startDown = false;
+    export class SpinnerEvents implements IEvents {
+        spinner: Spinner;
+        direction: string;
+        value: string;
+        private startDown: boolean = false;
+
+        constructor(spinner: Spinner) {
             this.spinner = spinner;
-            this.spinner.inputElement.on("mousewheel", function (e) { return _this[e.type](e); });
-            this.spinner.buttonElement.on("mousedown mouseup", "button", function (e) { return _this[e.type](e); });
+
+            this.spinner.inputElement.on("mousewheel", (e: JQueryEventObject) => this[e.type](e));
+            this.spinner.buttonElement.on("mousedown mouseup", "button", (e: JQueryEventObject) => this[e.type](e));
         }
+
         /**
          * Mouse down event sets property startDown to true
          * and calls 'changeValue' function.
@@ -43,16 +59,20 @@ var Numeric;
          * @method mousedown
          * @param {JQueryEventObject} e - Event handler
          */
-        SpinnerEvents.prototype.mousedown = function (e) {
-            var _this = this;
+        mousedown(e: JQueryEventObject): void {
             this.startDown = true;
-            var el = $(e.target).closest('button'), direction = el.attr('data-direction'), value = this.spinner.inputElement.val();
-            if (!isNaN(value) && value !== this.value) {
+            var el = $(e.target).closest('button'),
+                direction = el.attr('data-direction'),
+                value = this.spinner.inputElement.val();
+
+            if(!isNaN(value) && value !== this.value) {
                 this.value = value;
             }
+
             this.changeValue(direction);
-            interval = setInterval(function () { return _this.changeValue(direction); }, 400);
-        };
+            interval = setInterval(() => this.changeValue(direction), 400);
+        }
+
         /**
          * Mouse up event sets property startDown to false
          * and clears interval.
@@ -60,10 +80,11 @@ var Numeric;
          * @method mouseup
          * @param {JQueryEventObject} e - Event handler
          */
-        SpinnerEvents.prototype.mouseup = function (e) {
+        mouseup(e: JQueryEventObject): void {
             this.startDown = false;
             clearInterval(interval);
-        };
+        }
+
         /**
          * Mouse wheel event provides changing value.
          * This uses jquery.mousewheel.js library to detect
@@ -72,60 +93,103 @@ var Numeric;
          * @method mousewheel
          * @param {JQueryEventObject} e - Event handler
          */
-        SpinnerEvents.prototype.mousewheel = function (e) {
-            if (this.spinner.scrollable && this.spinner.inputElement.is(":focus")) {
+        mousewheel(e: JQueryEventObject): void {
+            if(this.spinner.scrollable && this.spinner.inputElement.is(":focus")) {
                 e.preventDefault();
                 var direction = e.deltaY === 1 ? "up" : "down";
                 this.changeValue(direction);
             }
-        };
+        }
+
         /**
          * Virtual method to be overridden.
          *
          * @param {string} direction - Value "up" or "down" defines increasing or decreasing value
         */
-        SpinnerEvents.prototype.changeValue = function (direction) {
+        changeValue(direction: string) {
             throw "Virtual method";
-        };
-        return SpinnerEvents;
-    })();
-    Numeric.SpinnerEvents = SpinnerEvents;
+        }
+
+        /**
+         * Method checks whether value is between minimal and maximal
+         * value if min or max option is defined.
+         * Date time pickers only.
+         *
+         * @method checkRange
+         * @param {string} min - Minimal value
+         * @param {string} max - Maximal value
+         * @param {string} format - Date/time format for correct comparing date/time value
+         * @param {any} value - Actual value
+         *
+         * @returns {any}
+         */
+        checkRange(min: string, max: string, format: string, value: any): any {
+            if(min && value.format(format) < min){
+                value = moment(min, format);
+            }
+            if(max && value.format(format) > max){
+                value = moment(max, format);
+            }
+            return value;
+        }
+    }
+
     /*
     * This class provides functionality for NUMBER values. It extends base class
     * and has implemented own method "changeValue".
     *
     * @class NumberSpinner
     * @extends {SpinnerEvents}
+    * @param {number} - Minimal value
+    * @param {number} - Maximal value
     *
     * */
-    var NumberSpinner = (function (_super) {
-        __extends(NumberSpinner, _super);
-        function NumberSpinner(spinner) {
-            _super.call(this, spinner);
+    export class NumberSpinner extends SpinnerEvents {
+        min: number;
+        max: number;
+
+        constructor(spinner: Spinner) {
+            super(spinner);
+            if(!isNaN(spinner.min)) {
+                this.min = Number(spinner.min);
+            }
+            if(!isNaN(spinner.max)) {
+                this.max = Number(spinner.max);
+            }
         }
+
         /**
          * In class that provides functionality for NUMBER values.
          * This function changes value based on direction and step
          * and rounds value according to precision.
+         * In case minimal or maximal value is defined, there is the check
+         * if actual value is between min and max.
          *
          * @override
          * @method changeValue
          * @param {string} direction - Direction of changing value ("up" for increase, "down" for decrease)
          */
-        NumberSpinner.prototype.changeValue = function (direction) {
-            var value = Number(this.spinner.inputElement.val()), step = this.spinner.step, precision = this.spinner.precision;
-            if (direction === "up") {
+        changeValue(direction: string) {
+            var value = Number(this.spinner.inputElement.val()),
+                step = this.spinner.step,
+                precision = this.spinner.precision;
+
+            if(direction === "up") {
                 value += step;
-            }
-            else {
+            } else {
                 value -= step;
+            }
+
+            if(this.min !== undefined && value < this.min) {
+                value = this.min;
+            } else if (this.max !== undefined && value > this.max) {
+                value = this.max;
             }
             this.value = value.toFixed(precision);
             this.spinner.inputElement.val(this.value);
-        };
-        return NumberSpinner;
-    })(SpinnerEvents);
-    Numeric.NumberSpinner = NumberSpinner;
+        }
+    }
+
     /*
      * This class provides functionality for DATE values. It extends base class
      * and has implemented own method "changeValue". This class needs properties
@@ -137,19 +201,31 @@ var Numeric;
      *
      * @class NumberSpinner
      * @extends {SpinnerEvents}
+     * @param {number} - Minimal value
+     * @param {number} - Maximal value
      *
      * */
-    var DateSpinner = (function (_super) {
-        __extends(DateSpinner, _super);
-        function DateSpinner(spinner) {
-            _super.call(this, spinner);
-            if (!spinner.dateFormat) {
+    export class DateSpinner extends SpinnerEvents {
+        min: string;
+        max: string;
+        formatCompare: string = "YYYY-MM-DD";
+
+        constructor(spinner: Spinner) {
+            super(spinner);
+            if(!spinner.dateFormat) {
                 spinner.dateFormat = "MM/DD/YYYY";
             }
-            if (!spinner.stepUnit) {
+            if(!spinner.stepUnit) {
                 spinner.stepUnit = "days";
             }
+            if(spinner.min) {
+                this.min = moment(spinner.min, spinner.dateFormat).format(this.formatCompare);
+            }
+            if(spinner.max) {
+                this.max = moment(spinner.max, spinner.dateFormat).format(this.formatCompare);
+            }
         }
+
         /**
          * In class that provides functionality for DATE values. It extends base class
          * and has implemented own method "changeValue". This class needs properties
@@ -166,23 +242,29 @@ var Numeric;
          * @method changeValue
          * @param {string} direction - Direction of changing value ("up" for increase, "down" for decrease)
          */
-        DateSpinner.prototype.changeValue = function (direction) {
-            var value = this.spinner.inputElement.val(), momentDate = moment(value), format = this.spinner.dateFormat, step = this.spinner.step, unit = this.spinner.stepUnit;
-            if (!momentDate.isValid()) {
+        changeValue(direction: string) {
+            var value = this.spinner.inputElement.val(),
+                momentDate = moment(value),
+                format = this.spinner.dateFormat,
+                step = this.spinner.step,
+                unit = this.spinner.stepUnit;
+
+            if(!momentDate.isValid()) {
                 momentDate = moment();
             }
-            if (direction === "up") {
-                momentDate.add(step, unit);
-            }
-            else {
+
+            if(direction === "up") {
+                momentDate.add(step, unit)
+            } else {
                 momentDate.subtract(step, unit);
             }
+
+            momentDate = this.checkRange(this.min, this.max, this.formatCompare, momentDate);
             this.value = momentDate.format(format);
             this.spinner.inputElement.val(this.value);
-        };
-        return DateSpinner;
-    })(SpinnerEvents);
-    Numeric.DateSpinner = DateSpinner;
+        }
+    }
+
     /*
      * This class provides functionality for TIME values. It extends base class
      * and has implemented own method "changeValue". This class needs properties
@@ -194,19 +276,31 @@ var Numeric;
      *
      * @class NumberSpinner
      * @extends {SpinnerEvents}
+     * @param {number} - Minimal value
+     * @param {number} - Maximal value
      *
      * */
-    var TimeSpinner = (function (_super) {
-        __extends(TimeSpinner, _super);
-        function TimeSpinner(spinner) {
-            _super.call(this, spinner);
-            if (!spinner.dateFormat) {
+    export class TimeSpinner extends SpinnerEvents {
+        min: string;
+        max: string;
+        formatCompare: string = "H:mm:ss";
+
+        constructor(spinner: Spinner) {
+            super(spinner);
+            if(!spinner.dateFormat) {
                 spinner.dateFormat = "h:mm:ss A";
             }
-            if (!spinner.stepUnit) {
+            if(!spinner.stepUnit) {
                 spinner.stepUnit = "hours";
             }
+            if(spinner.min) {
+                this.min = moment(spinner.min, spinner.dateFormat).format(this.formatCompare);
+            }
+            if(spinner.max) {
+                this.max = moment(spinner.max, spinner.dateFormat).format(this.formatCompare);
+            }
         }
+
         /**
          * In class that provides functionality for TIME values. It extends base class
          * and has implemented own method "changeValue". This class needs properties
@@ -223,18 +317,24 @@ var Numeric;
          * @method changeValue
          * @param {string} direction - Direction of changing value ("up" for increase, "down" for decrease)
          */
-        TimeSpinner.prototype.changeValue = function (direction) {
-            var value = this.spinner.inputElement.val(), format = this.spinner.dateFormat, step = this.spinner.step, unit = this.spinner.stepUnit;
+        changeValue(direction: string) {
+            var value = this.spinner.inputElement.val(),
+                format = this.spinner.dateFormat,
+                step = this.spinner.step,
+                unit = this.spinner.stepUnit;
+
             var momentDate = this.assembleMomentDate(value);
-            if (direction === "up") {
-                momentDate.add(step, unit);
-            }
-            else {
+            if(direction === "up") {
+                momentDate.add(step, unit)
+            } else {
                 momentDate.subtract(step, unit);
             }
+
+            momentDate = this.checkRange(this.min, this.max, this.formatCompare, momentDate);
             this.value = momentDate.format(format);
             this.spinner.inputElement.val(this.value);
-        };
+        }
+
         /**
          * Since moment.js library does not allow manipulate only with time part of datetime
          * it is necessary to create valid value consisting of date and time.
@@ -246,16 +346,18 @@ var Numeric;
          * @method assembleMomentDate
          * @param {string} time - Original time value from input field
         * */
-        TimeSpinner.prototype.assembleMomentDate = function (time) {
-            var today = new Date(), momentTime = moment(time, this.spinner.dateFormat);
-            if (!momentTime.isValid()) {
+        assembleMomentDate(time: string) {
+            var today = new Date(),
+                momentTime = moment(time, this.spinner.dateFormat);
+
+            if(!momentTime.isValid()) {
                 return moment();
             }
+
             return moment([today.getFullYear(), today.getMonth(), today.getDate(), momentTime.hours(), momentTime.minutes(), momentTime.seconds()]);
-        };
-        return TimeSpinner;
-    })(SpinnerEvents);
-    Numeric.TimeSpinner = TimeSpinner;
+        }
+    }
+
     /*
      * This class provides functionality for DATETIME values. It extends base class
      * and has implemented own method "changeValue". This class needs properties
@@ -268,19 +370,31 @@ var Numeric;
      *
      * @class NumberSpinner
      * @extends {SpinnerEvents}
+     * @param {number} - Minimal value
+     * @param {number} - Maximal value
      *
      * */
-    var DateTimeSpinner = (function (_super) {
-        __extends(DateTimeSpinner, _super);
-        function DateTimeSpinner(spinner) {
-            _super.call(this, spinner);
-            if (!spinner.dateFormat) {
+    export class DateTimeSpinner extends SpinnerEvents {
+        min: string;
+        max: string;
+        formatCompare: string = "YYYY-MM-DD H:mm:ss";
+
+        constructor(spinner: Spinner) {
+            super(spinner);
+            if(!spinner.dateFormat) {
                 spinner.dateFormat = "MM/DD/YYYY h:mm:ss A";
             }
-            if (!spinner.stepUnit) {
+            if(!spinner.stepUnit) {
                 spinner.stepUnit = "days";
             }
+            if(spinner.min) {
+                this.min = moment(spinner.min, spinner.dateFormat).format(this.formatCompare);
+            }
+            if(spinner.max) {
+                this.max = moment(spinner.max, spinner.dateFormat).format(this.formatCompare);
+            }
         }
+
         /**
          *
          * In class that provides functionality for DATETIME values. It extends base class
@@ -298,22 +412,27 @@ var Numeric;
          * @method changeValue
          * @param {string} direction - Direction of changing value ("up" for increase, "down" for decrease)
          */
-        DateTimeSpinner.prototype.changeValue = function (direction) {
-            var value = this.spinner.inputElement.val(), momentDate = moment(value), format = this.spinner.dateFormat, step = this.spinner.step, unit = this.spinner.stepUnit;
-            if (!momentDate.isValid()) {
+        changeValue(direction: string) {
+            var value = this.spinner.inputElement.val(),
+                momentDate = moment(value),
+                format = this.spinner.dateFormat,
+                step = this.spinner.step,
+                unit = this.spinner.stepUnit;
+
+            if(!momentDate.isValid()) {
                 momentDate = moment();
             }
-            if (direction === "up") {
-                momentDate.add(step, unit);
-            }
-            else {
+
+            if(direction === "up") {
+                momentDate.add(step, unit)
+            } else {
                 momentDate.subtract(step, unit);
             }
+
+            momentDate = this.checkRange(this.min, this.max, this.formatCompare, momentDate);
             this.value = momentDate.format(format);
             this.spinner.inputElement.val(this.value);
-        };
-        return DateTimeSpinner;
-    })(SpinnerEvents);
-    Numeric.DateTimeSpinner = DateTimeSpinner;
-})(Numeric || (Numeric = {}));
-//# sourceMappingURL=SpinnerEvents.js.map
+        }
+    }
+
+}
