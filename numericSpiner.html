@@ -2,53 +2,54 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Spinner</title>
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
     <link href="bootstrap/css/font-awesome.css" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
     <link href="assets/css/numeric.spiner.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">   
-            <div class="navbar-collapse collapse" style="border-bottom: 1px solid #ccc;">
-                <ul class="nav navbar-nav">
-                  <li><h2>Numeric spinner</h2></li>
-                </ul>
-                <div class="navbar-right navbar-buttons" style="margin-top: 20px;">
-                    <a href="index.html" rel="tooltip" class="btn btn-default btn-sm" style="border-radius: 50%;" data-toggle="tooltip" data-placement="bottom" title="Home page"><i class="glyphicon glyphicon-home"></i></a>
-                </div>
-              </div>
+        <div class="navbar-collapse collapse prototypes-nav">
+            <ul class="nav navbar-nav">
+                <li><h2>Numeric spinner</h2></li>
+            </ul>
+            <div class="navbar-right navbar-buttons" style="margin-top: 20px;">
+                <a href="index.html" rel="tooltip" class="btn btn-default btn-sm prototypes-home-button" data-toggle="tooltip" data-placement="bottom" title="Home page"><i class="glyphicon glyphicon-home"></i></a>
+            </div>
+        </div>
             
             
-            <div>
-		<div style="margin-top: 20px;">
-                  <p>Component with default settings</p>
-                  <div>
-                    <input type="text" id="spiner2" value="13">
-                  </div>
+        <div>
+			<div style="margin-top: 20px;">
+                <p>Component with default settings</p>
+                <div>
+					<input type="text" id="spiner2" value="13">
                 </div>
+             </div>
                 
-                <div style="margin-top: 20px;">
-                  <p>Component with custom settings - click to input field and try to scroll up and down</p>
-                  <div>
+            <div style="margin-top: 20px;">
+                <p>Component with custom settings - click to input field and try to scroll up and down</p>
+                <div>
                     <input type="text" id="spiner" value="16.2">
-                  </div>
                 </div>
+            </div>
                 
-                <div style="margin-top: 20px;">
-                  <p>Component with TypeScript</p>
-                  <div>
+            <div style="margin-top: 20px;">
+                <p>Component with TypeScript</p>
+                <div>
                     <input type="text" id="spinerPlugin" value="6">
-                  </div>
                 </div>
+            </div>
 	    </div>
               
-        </div>
+    </div>
 
 	<script src="bootstrap/js/jquery-2.1.1.js"></script>
-        <script src="bootstrap/js/jquery.mousewheel.js"></script>
-        <script src="assets/js/numeric.spiner.js"></script>
-        <script src="assets/js/numeric.plugin.js"></script>
+    <script src="bootstrap/js/jquery.mousewheel.js"></script>
+    <script src="assets/js/numeric.spiner.js"></script>
+    <script src="assets/js/numeric.plugin.js"></script>
 
   <script type="text/javascript">
       (function(){
