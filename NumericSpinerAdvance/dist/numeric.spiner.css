@@ -34,3 +34,9 @@ input.spiner {
     top: 0;
     left: 4px;
 }
+.spinner-addon {
+    margin-top: 4px;
+}
+.spinner-addon .btn[data-direction] {
+    border-radius: 0;
+}
