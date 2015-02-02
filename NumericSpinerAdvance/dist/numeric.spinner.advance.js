@@ -424,6 +424,9 @@ var Numeric;
                 this.inputElement.css({ "width": options.width });
             }
             this.buttonElement = $('<div class="input-group-btn-vertical"/>');
+            if (this.inputElement.next('.input-group-addon').length) {
+                this.buttonElement.addClass('spinner-addon');
+            }
             this.buttonElement.append(NumericButton.render("up", "fa fa-caret-up")).append(NumericButton.render("down", "fa fa-caret-down"));
             this.inputElement.after(this.buttonElement);
             var events;
@@ -453,7 +456,7 @@ var Numeric;
          * @returns {jQuery}
          */
         NumericButton.render = function (direction, icon) {
-            return $('<button class="btn btn-default" data-direction="' + direction + '"><i class="' + icon + '"></i></button>');
+            return $('<button type="button" class="btn btn-default" data-direction="' + direction + '"><i class="' + icon + '"></i></button>');
         };
         return NumericButton;
     })();
