@@ -83,7 +83,7 @@ Plugin contains several options to customize component.
 * `valueChanged(newValue)` - function which is called once value in input field is changed. Parameter contains actual (changed) value
   - type: `function`
   - default: empty
-  - example:
+  - usage:
   
     ````javascript
     var spinner = new Numeric.Spinner($("#spinner"), {
