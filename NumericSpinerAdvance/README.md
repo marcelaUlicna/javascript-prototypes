@@ -67,15 +67,33 @@ Plugin contains several options to customize component.
     - `TimeSpinner` - h:mm:ss A
     - `DateTimeSpinner` - MM/DD/YYYY h:mm:ss A
 * `stepUnit` - defines the part of date or time that is used for increasing and decreasing the value, for all types except `NumberSpinner` type
-  - type: `string`
-  - options: `days`, `months`, `years`, `hours`, `minutes`, `seconds`
+  - type: `enum`
+  - namespace: `Numeric`
+  - options: `StepUnit.Days`, `StepUnit.Months`, `StepUnit.Years`, `StepUnit.Hours`, `StepUnit.Minutes`, `StepUnit.Seconds`
   - default:
-    - `DateSpinner` - days
-    - `TimeSpinner` - hours
-    - `DateTimeSpinner` - days
+    - `DateSpinner` - StepUnit.Days
+    - `TimeSpinner` - StepUnit.Hours
+    - `DateTimeSpinner` - StepUnit.Days
 * `min` - minimum value
   - type: `number` or `string`, depends on spinner type
   - default: not specified
 * `max` - maximum value
   - type: `number` or `string`, depends on spinner type
   - default: not specified
+* `valueChanged(newValue)` - function which is called once value in input field is changed. Parameter contains actual (changed) value
+  - type: `function`
+  - default: empty
+  - example:
+  
+    ````javascript
+    var spinner = new Numeric.Spinner($("#spinner"), {
+            step: 10,
+            spinnerType: Numeric.NumberSpinner,
+            width: 200,
+            scrollable: true,
+            valueChanged: function(newValue) {
+                var actualValue = newValue;
+                // do stuff with actual value
+            }
+        });
+    ````
