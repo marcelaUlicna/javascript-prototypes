@@ -20,7 +20,7 @@ var Numeric;
      * @param {number} step - How much to increase or decrease the value
      * @param {string} value - Input value
      * @param {string} dateFormat - Custom format of date and/or time based on moment.js component
-     * @param {string} stepUnit - This defines which unit (day, hour...) should be used for changing value
+     * @param {StepUnit} stepUnit - This defines which unit (day, hour...) should be used for changing value
      * @param {any} min - Minimal value
      * @param {any} max - Maximal value
      */
@@ -29,6 +29,9 @@ var Numeric;
             this.precision = 0;
             this.step = 1;
             this.scrollable = false;
+            this.stepUnit = 0 /* Days */;
+            this.valueChanged = function (newValue) {
+            };
             $.extend(this, options);
             this.inputElement = $(el);
             this.value = this.inputElement.val() || 0;

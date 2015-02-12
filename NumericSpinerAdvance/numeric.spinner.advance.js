@@ -12,6 +12,25 @@ var __extends = this.__extends || function (d, b) {
 };
 var Numeric;
 (function (Numeric) {
+    /**
+     * Enum for step unit for date/time spinner
+     *
+     * @readonly
+     * @enum {number} StepUnit
+     * @description Enum members: Days, Months, Years, Hours, Minutes, Seconds
+     */
+    (function (StepUnit) {
+        StepUnit[StepUnit["Days"] = 0] = "Days";
+        StepUnit[StepUnit["Months"] = 1] = "Months";
+        StepUnit[StepUnit["Years"] = 2] = "Years";
+        StepUnit[StepUnit["Hours"] = 3] = "Hours";
+        StepUnit[StepUnit["Minutes"] = 4] = "Minutes";
+        StepUnit[StepUnit["Seconds"] = 5] = "Seconds";
+    })(Numeric.StepUnit || (Numeric.StepUnit = {}));
+    var StepUnit = Numeric.StepUnit;
+})(Numeric || (Numeric = {}));
+var Numeric;
+(function (Numeric) {
     var interval;
     /**
      * Base class that implements IEvents interface. It provides basic implementation
@@ -160,6 +179,7 @@ var Numeric;
             }
             this.value = value.toFixed(precision);
             this.spinner.inputElement.val(this.value);
+            this.spinner.valueChanged(this.value);
         };
         return NumberSpinner;
     })(SpinnerEvents);
@@ -184,12 +204,14 @@ var Numeric;
         function DateSpinner(spinner) {
             _super.call(this, spinner);
             this.formatCompare = "YYYY-MM-DD";
+            this.allowedUnits = [0 /* Days */, 1 /* Months */, 2 /* Years */];
             if (!spinner.dateFormat) {
                 spinner.dateFormat = "MM/DD/YYYY";
             }
-            if (!spinner.stepUnit) {
-                spinner.stepUnit = "days";
+            if (!spinner.stepUnit || this.allowedUnits.indexOf(spinner.stepUnit) == -1) {
+                spinner.stepUnit = 0 /* Days */;
             }
+            spinner["unit"] = Numeric.StepUnit[spinner.stepUnit];
             if (spinner.min) {
                 this.min = moment(spinner.min, spinner.dateFormat).format(this.formatCompare);
             }
@@ -214,7 +236,7 @@ var Numeric;
          * @param {string} direction - Direction of changing value ("up" for increase, "down" for decrease)
          */
         DateSpinner.prototype.changeValue = function (direction) {
-            var value = this.spinner.inputElement.val(), momentDate = moment(value), format = this.spinner.dateFormat, step = this.spinner.step, unit = this.spinner.stepUnit;
+            var value = this.spinner.inputElement.val(), momentDate = moment(value), format = this.spinner.dateFormat, step = this.spinner.step, unit = this.spinner["unit"];
             if (!momentDate.isValid()) {
                 momentDate = moment();
             }
@@ -251,12 +273,14 @@ var Numeric;
         function TimeSpinner(spinner) {
             _super.call(this, spinner);
             this.formatCompare = "H:mm:ss";
+            this.allowedUnits = [3 /* Hours */, 4 /* Minutes */, 5 /* Seconds */];
             if (!spinner.dateFormat) {
                 spinner.dateFormat = "h:mm:ss A";
             }
-            if (!spinner.stepUnit) {
-                spinner.stepUnit = "hours";
+            if (!spinner.stepUnit || this.allowedUnits.indexOf(spinner.stepUnit) == -1) {
+                spinner.stepUnit = 3 /* Hours */;
             }
+            spinner["unit"] = Numeric.StepUnit[spinner.stepUnit];
             if (spinner.min) {
                 this.min = moment(spinner.min, spinner.dateFormat).format(this.formatCompare);
             }
@@ -281,7 +305,7 @@ var Numeric;
          * @param {string} direction - Direction of changing value ("up" for increase, "down" for decrease)
          */
         TimeSpinner.prototype.changeValue = function (direction) {
-            var value = this.spinner.inputElement.val(), format = this.spinner.dateFormat, step = this.spinner.step, unit = this.spinner.stepUnit;
+            var value = this.spinner.inputElement.val(), format = this.spinner.dateFormat, step = this.spinner.step, unit = this.spinner["unit"];
             var momentDate = this.assembleMomentDate(value);
             if (direction === "up") {
                 momentDate.add(step, unit);
@@ -339,8 +363,9 @@ var Numeric;
                 spinner.dateFormat = "MM/DD/YYYY h:mm:ss A";
             }
             if (!spinner.stepUnit) {
-                spinner.stepUnit = "days";
+                spinner.stepUnit = 0 /* Days */;
             }
+            spinner["unit"] = Numeric.StepUnit[spinner.stepUnit];
             if (spinner.min) {
                 this.min = moment(spinner.min, spinner.dateFormat).format(this.formatCompare);
             }
@@ -366,7 +391,7 @@ var Numeric;
          * @param {string} direction - Direction of changing value ("up" for increase, "down" for decrease)
          */
         DateTimeSpinner.prototype.changeValue = function (direction) {
-            var value = this.spinner.inputElement.val(), momentDate = moment(value), format = this.spinner.dateFormat, step = this.spinner.step, unit = this.spinner.stepUnit;
+            var value = this.spinner.inputElement.val(), momentDate = moment(value), format = this.spinner.dateFormat, step = this.spinner.step, unit = this.spinner["unit"];
             if (!momentDate.isValid()) {
                 momentDate = moment();
             }
@@ -406,7 +431,7 @@ var Numeric;
      * @param {number} step - How much to increase or decrease the value
      * @param {string} value - Input value
      * @param {string} dateFormat - Custom format of date and/or time based on moment.js component
-     * @param {string} stepUnit - This defines which unit (day, hour...) should be used for changing value
+     * @param {StepUnit} stepUnit - This defines which unit (day, hour...) should be used for changing value
      * @param {any} min - Minimal value
      * @param {any} max - Maximal value
      */
@@ -415,6 +440,9 @@ var Numeric;
             this.precision = 0;
             this.step = 1;
             this.scrollable = false;
+            this.stepUnit = 0 /* Days */;
+            this.valueChanged = function (newValue) {
+            };
             $.extend(this, options);
             this.inputElement = $(el);
             this.value = this.inputElement.val() || 0;
@@ -424,6 +452,9 @@ var Numeric;
                 this.inputElement.css({ "width": options.width });
             }
             this.buttonElement = $('<div class="input-group-btn-vertical"/>');
+            if (this.inputElement.next('.input-group-addon').length) {
+                this.buttonElement.addClass('spinner-addon');
+            }
             this.buttonElement.append(NumericButton.render("up", "fa fa-caret-up")).append(NumericButton.render("down", "fa fa-caret-down"));
             this.inputElement.after(this.buttonElement);
             var events;
@@ -453,7 +484,7 @@ var Numeric;
          * @returns {jQuery}
          */
         NumericButton.render = function (direction, icon) {
-            return $('<button class="btn btn-default" data-direction="' + direction + '"><i class="' + icon + '"></i></button>');
+            return $('<button type="button" class="btn btn-default" data-direction="' + direction + '"><i class="' + icon + '"></i></button>');
         };
         return NumericButton;
     })();

@@ -3,9 +3,9 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <link href="css/bootstrap.css" rel="stylesheet"/>
-    <link href="css/bootstrap-theme.css" rel="stylesheet"/>
-    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="lib/css/bootstrap.css" rel="stylesheet"/>
+    <link href="lib/css/bootstrap-theme.css" rel="stylesheet"/>
+    <link href="lib/css/font-awesome.css" rel="stylesheet">
     <link href="numeric.spiner.css" rel="stylesheet">
 </head>
 <body>
@@ -80,9 +80,9 @@
 
 </div>
 
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/jquery.mousewheel.js"></script>
-<script src="js/moment.js"></script>
+<script src="lib/js/jquery-2.1.1.js"></script>
+<script src="lib/js/jquery.mousewheel.js"></script>
+<script src="lib/js/moment.js"></script>
 <script src="numeric.spinner.advance.js"></script>
 
 <script type="text/javascript">
@@ -91,7 +91,10 @@
             step: 10,
             spinnerType: Numeric.NumberSpinner,
             width: 200,
-            scrollable: true
+            scrollable: true,
+            valueChanged: function(newValue) {
+                console.log("Actual value", newValue);
+            }
         });
 
         var spinner5 = new Numeric.Spinner($("#spinner5"), {
@@ -121,7 +124,7 @@
             spinnerType: Numeric.TimeSpinner,
             width: 200,
             scrollable: true,
-            stepUnit: "minutes",
+            stepUnit: Numeric.StepUnit.Minutes,
             step: 10
         });
 
@@ -129,7 +132,7 @@
             spinnerType: Numeric.TimeSpinner,
             width: 200,
             scrollable: true,
-            stepUnit: "minutes",
+            stepUnit: Numeric.StepUnit.Minutes,
             step: 10,
             min: "10:00:00 PM",
             max: "11:00:00 PM"
@@ -139,14 +142,14 @@
             spinnerType: Numeric.DateTimeSpinner,
             width: 200,
             scrollable: true,
-            stepUnit: "hours"
+            stepUnit: Numeric.StepUnit.Hours
         });
 
         var spinner8 = new Numeric.Spinner($("#spinner8"), {
             spinnerType: Numeric.DateTimeSpinner,
             width: 200,
             scrollable: true,
-            stepUnit: "hours",
+            stepUnit: Numeric.StepUnit.Hours,
             min: "2/10/2014 10:00:00 PM",
             max: "2/20/2014 11:00:00 PM"
         });
