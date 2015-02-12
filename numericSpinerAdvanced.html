@@ -103,7 +103,10 @@
             step: 10,
             spinnerType: Numeric.NumberSpinner,
             width: 200,
-            scrollable: true
+            scrollable: true,
+            valueChanged: function(newValue) {
+                console.log("Actual value", newValue);
+            }
         });
 		
 		var advance2 = new Numeric.Spinner($("#spinnerAdvance2"), {
@@ -133,7 +136,7 @@
             spinnerType: Numeric.TimeSpinner,
             width: 200,
             scrollable: true,
-            stepUnit: "minutes",
+            stepUnit: Numeric.StepUnit.Minutes,
             step: 10
         });
 
@@ -141,7 +144,7 @@
             spinnerType: Numeric.TimeSpinner,
             width: 200,
             scrollable: true,
-            stepUnit: "minutes",
+            stepUnit: Numeric.StepUnit.Minutes,
             step: 10,
             min: "10:00:00 PM",
             max: "11:00:00 PM"
@@ -151,14 +154,14 @@
             spinnerType: Numeric.DateTimeSpinner,
             width: 200,
             scrollable: true,
-            stepUnit: "hours"
+            stepUnit: Numeric.StepUnit.Hours
         });
 
         var advance8 = new Numeric.Spinner($("#spinnerAdvance8"), {
             spinnerType: Numeric.DateTimeSpinner,
             width: 200,
             scrollable: true,
-            stepUnit: "hours",
+            stepUnit: Numeric.StepUnit.Hours,
             min: "2/10/2014 10:00:00 PM",
             max: "2/20/2014 11:00:00 PM"
         });
