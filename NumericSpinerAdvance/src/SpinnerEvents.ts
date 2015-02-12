@@ -6,6 +6,20 @@
 /// <reference path="Spinner.ts" />
 
 module Numeric {
+
+    /**
+     * Enum for step unit for date/time spinner
+     *
+     * @readonly
+     * @enum {number} StepUnit
+     * @description Enum members: Days, Months, Years, Hours, Minutes, Seconds
+     */
+    export enum StepUnit {
+        Days, Months, Years, Hours, Minutes, Seconds
+    }
+}
+
+module Numeric {
     var interval;
 
     /**
@@ -187,6 +201,7 @@ module Numeric {
             }
             this.value = value.toFixed(precision);
             this.spinner.inputElement.val(this.value);
+            this.spinner.valueChanged(this.value);
         }
     }
 
@@ -209,15 +224,18 @@ module Numeric {
         min: string;
         max: string;
         formatCompare: string = "YYYY-MM-DD";
+        private allowedUnits = [StepUnit.Days, StepUnit.Months, StepUnit.Years];
+
 
         constructor(spinner: Spinner) {
             super(spinner);
             if(!spinner.dateFormat) {
                 spinner.dateFormat = "MM/DD/YYYY";
             }
-            if(!spinner.stepUnit) {
-                spinner.stepUnit = "days";
+            if(!spinner.stepUnit || this.allowedUnits.indexOf(spinner.stepUnit) == -1) {
+                spinner.stepUnit = StepUnit.Days;
             }
+            spinner["unit"] = StepUnit[spinner.stepUnit];
             if(spinner.min) {
                 this.min = moment(spinner.min, spinner.dateFormat).format(this.formatCompare);
             }
@@ -247,7 +265,7 @@ module Numeric {
                 momentDate = moment(value),
                 format = this.spinner.dateFormat,
                 step = this.spinner.step,
-                unit = this.spinner.stepUnit;
+                unit = this.spinner["unit"];
 
             if(!momentDate.isValid()) {
                 momentDate = moment();
@@ -284,15 +302,17 @@ module Numeric {
         min: string;
         max: string;
         formatCompare: string = "H:mm:ss";
+        private allowedUnits = [StepUnit.Hours, StepUnit.Minutes, StepUnit.Seconds];
 
         constructor(spinner: Spinner) {
             super(spinner);
             if(!spinner.dateFormat) {
                 spinner.dateFormat = "h:mm:ss A";
             }
-            if(!spinner.stepUnit) {
-                spinner.stepUnit = "hours";
+            if(!spinner.stepUnit || this.allowedUnits.indexOf(spinner.stepUnit) == -1) {
+                spinner.stepUnit = StepUnit.Hours;
             }
+            spinner["unit"] = StepUnit[spinner.stepUnit];
             if(spinner.min) {
                 this.min = moment(spinner.min, spinner.dateFormat).format(this.formatCompare);
             }
@@ -321,7 +341,7 @@ module Numeric {
             var value = this.spinner.inputElement.val(),
                 format = this.spinner.dateFormat,
                 step = this.spinner.step,
-                unit = this.spinner.stepUnit;
+                unit = this.spinner["unit"];
 
             var momentDate = this.assembleMomentDate(value);
             if(direction === "up") {
@@ -385,8 +405,9 @@ module Numeric {
                 spinner.dateFormat = "MM/DD/YYYY h:mm:ss A";
             }
             if(!spinner.stepUnit) {
-                spinner.stepUnit = "days";
+                spinner.stepUnit = StepUnit.Days;
             }
+            spinner["unit"] = StepUnit[spinner.stepUnit];
             if(spinner.min) {
                 this.min = moment(spinner.min, spinner.dateFormat).format(this.formatCompare);
             }
@@ -417,7 +438,7 @@ module Numeric {
                 momentDate = moment(value),
                 format = this.spinner.dateFormat,
                 step = this.spinner.step,
-                unit = this.spinner.stepUnit;
+                unit = this.spinner["unit"];
 
             if(!momentDate.isValid()) {
                 momentDate = moment();

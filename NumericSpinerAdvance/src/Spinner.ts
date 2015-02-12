@@ -16,7 +16,7 @@ module Numeric {
      * @param {number} step - How much to increase or decrease the value
      * @param {number} width - Input width
      * @param {string} dateFormat - Custom format of date and/or time based on moment.js component
-     * @param {string} stepUnit - This defines which unit (day, hour...) should be used for changing value
+     * @param {StepUnit} stepUnit - This defines which unit (day, hour...) should be used for changing value
      */
     interface ISpinner {
         spinnerType: SpinnerEvents;
@@ -25,9 +25,17 @@ module Numeric {
         scrollable: boolean;
         width: number;
         dateFormat: string;
-        stepUnit: string;
+        stepUnit: StepUnit;
         min: any;
         max: any;
+
+        /**
+         * Provides custom implementation of actual value.
+         *
+         * @method valueChanged
+         * @param {any} newValue - Actual/changed value
+        * */
+        valueChanged(newValue: any): void;
     }
 
     /**
@@ -45,7 +53,7 @@ module Numeric {
      * @param {number} step - How much to increase or decrease the value
      * @param {string} value - Input value
      * @param {string} dateFormat - Custom format of date and/or time based on moment.js component
-     * @param {string} stepUnit - This defines which unit (day, hour...) should be used for changing value
+     * @param {StepUnit} stepUnit - This defines which unit (day, hour...) should be used for changing value
      * @param {any} min - Minimal value
      * @param {any} max - Maximal value
      */
@@ -55,15 +63,18 @@ module Numeric {
         width: number;
         spinnerType: SpinnerEvents;
         precision: number = 0;
-        step: number = 1
+        step: number = 1;
         scrollable: boolean = false;
         value: string;
         dateFormat: string;
-        stepUnit: string;
+        stepUnit: StepUnit = StepUnit.Days;
         min: any;
         max: any;
+        valueChanged: (newValue: any) => void;
 
         constructor(el: JQuery, options: ISpinner) {
+            this.valueChanged = function (newValue: any) {};
+
             $.extend(this, options);
 
             this.inputElement = $(el);
