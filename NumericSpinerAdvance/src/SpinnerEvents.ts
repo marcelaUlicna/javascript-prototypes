@@ -280,6 +280,7 @@ module Numeric {
             momentDate = this.checkRange(this.min, this.max, this.formatCompare, momentDate);
             this.value = momentDate.format(format);
             this.spinner.inputElement.val(this.value);
+            this.spinner.valueChanged(this.value);
         }
     }
 
@@ -353,6 +354,7 @@ module Numeric {
             momentDate = this.checkRange(this.min, this.max, this.formatCompare, momentDate);
             this.value = momentDate.format(format);
             this.spinner.inputElement.val(this.value);
+            this.spinner.valueChanged(this.value);
         }
 
         /**
@@ -453,6 +455,7 @@ module Numeric {
             momentDate = this.checkRange(this.min, this.max, this.formatCompare, momentDate);
             this.value = momentDate.format(format);
             this.spinner.inputElement.val(this.value);
+            this.spinner.valueChanged(this.value);
         }
     }
 

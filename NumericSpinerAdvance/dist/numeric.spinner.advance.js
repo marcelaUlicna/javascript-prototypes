@@ -249,6 +249,7 @@ var Numeric;
             momentDate = this.checkRange(this.min, this.max, this.formatCompare, momentDate);
             this.value = momentDate.format(format);
             this.spinner.inputElement.val(this.value);
+            this.spinner.valueChanged(this.value);
         };
         return DateSpinner;
     })(SpinnerEvents);
@@ -316,6 +317,7 @@ var Numeric;
             momentDate = this.checkRange(this.min, this.max, this.formatCompare, momentDate);
             this.value = momentDate.format(format);
             this.spinner.inputElement.val(this.value);
+            this.spinner.valueChanged(this.value);
         };
         /**
          * Since moment.js library does not allow manipulate only with time part of datetime
@@ -404,6 +406,7 @@ var Numeric;
             momentDate = this.checkRange(this.min, this.max, this.formatCompare, momentDate);
             this.value = momentDate.format(format);
             this.spinner.inputElement.val(this.value);
+            this.spinner.valueChanged(this.value);
         };
         return DateTimeSpinner;
     })(SpinnerEvents);

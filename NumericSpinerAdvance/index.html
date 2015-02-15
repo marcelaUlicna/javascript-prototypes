@@ -109,7 +109,10 @@
         var spinner2 = new Numeric.Spinner($("#spinner2"), {
             spinnerType: Numeric.DateSpinner,
             width: 200,
-            scrollable: true
+            scrollable: true,
+            valueChanged: function(newValue) {
+                console.log("Actual value", newValue);
+            }
         });
 
         var spinner6 = new Numeric.Spinner($("#spinner6"), {
@@ -125,7 +128,10 @@
             width: 200,
             scrollable: true,
             stepUnit: Numeric.StepUnit.Minutes,
-            step: 10
+            step: 10,
+            valueChanged: function(newValue) {
+                console.log("Actual value", newValue);
+            }
         });
 
         var spinner7 = new Numeric.Spinner($("#spinner7"), {
@@ -142,7 +148,10 @@
             spinnerType: Numeric.DateTimeSpinner,
             width: 200,
             scrollable: true,
-            stepUnit: Numeric.StepUnit.Hours
+            stepUnit: Numeric.StepUnit.Hours,
+            valueChanged: function(newValue) {
+                console.log("Actual value", newValue);
+            }
         });
 
         var spinner8 = new Numeric.Spinner($("#spinner8"), {
