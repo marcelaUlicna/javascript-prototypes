@@ -1,0 +1,130 @@
+@table-width: 245px;
+
+/* USER'S ELEMENT */
+.ui-datetime-edit {
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* PICKER PLUGIN */
+.ui-datetime {
+  margin: 0;
+  width: 275px;
+  position: fixed;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  z-index: 5000;
+  overflow: hidden;
+  outline: 0;
+
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(170,170,170,1);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(170,170,170,1);
+  box-shadow: 3px 3px 5px 0px rgba(170,170,170,1);
+
+  /* QUICK NAVIGATION */
+  .header-nav {
+    width: 100%;
+    height: 50px;
+    padding-top: 2px;
+    border-bottom: 1px solid #d5d5d5;
+
+    .nav-icon {
+      display: inline-block;
+      margin-left: 20px;
+      float: left;
+      cursor: pointer;
+      opacity: 0.6;
+
+      &.simple-icon {
+        margin-top: 6px;
+      }
+
+      .fa-today,
+      .fa-next-week{
+        margin-top: 3px;
+
+      }
+    }
+    .nav-icon:hover {
+      opacity: 1;
+    }
+  }
+
+  /* PICKER BODY */
+  .picker-datetime-body {
+    padding: 15px;
+    overflow-y: auto;
+
+    table {
+      width: @table-width;
+    }
+
+    /* Inputs for date and time */
+    .input-picker-datetime {
+      th {
+        text-align: left;
+      }
+
+      .ui-datetime-date,
+      .ui-datetime-time {
+        width: 100px;
+      }
+
+      .ui-datetime-single-input {
+        width: @table-width;
+      }
+    }
+
+    /* Picker header */
+    .ui-datepicker-header {
+      margin-top: 15px;
+
+      .ui-datepicker-prev {
+        cursor: pointer;
+        float: left;
+      }
+      .ui-datepicker-next {
+        cursor: pointer;
+        float: right;
+      }
+      .ui-datepicker-title {
+        text-align: center;
+      }
+    }
+
+    /* Picker component */
+    .inline-picker {
+      margin-bottom: 5px;
+
+      .ui-datepicker-calendar {
+        margin: 0 auto;
+        margin-top: 9px;
+
+        th, td {
+          border: 1px solid #EEE;
+          padding: 6px;
+          text-align: center;
+        }
+
+        .ui-datepicker-current-day,
+        .ui-datepicker-selected-day{
+          background-color: #F0F0F0;
+        }
+        .ui-datepicker-other-month a {
+          color: Gray;
+        }
+
+        .ui-picker-empty {
+          border: none;
+        }
+      }
+    }
+  }
+}
