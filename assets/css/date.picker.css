@@ -1,0 +1,107 @@
+/* USER'S ELEMENT */
+.ui-datetime-edit {
+  display: inline-block;
+  cursor: pointer;
+}
+.ui-datetime-edit:hover {
+  text-decoration: none;
+}
+/* PICKER PLUGIN */
+.ui-datetime {
+  margin: 0;
+  width: 275px;
+  position: fixed;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  z-index: 5000;
+  overflow: hidden;
+  outline: 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 5px 0px #aaaaaa;
+  -moz-box-shadow: 3px 3px 5px 0px #aaaaaa;
+  box-shadow: 3px 3px 5px 0px #aaaaaa;
+  /* QUICK NAVIGATION */
+  /* PICKER BODY */
+}
+.ui-datetime .header-nav {
+  width: 100%;
+  height: 50px;
+  padding-top: 2px;
+  border-bottom: 1px solid #d5d5d5;
+}
+.ui-datetime .header-nav .nav-icon {
+  display: inline-block;
+  margin-left: 20px;
+  float: left;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.ui-datetime .header-nav .nav-icon.simple-icon {
+  margin-top: 6px;
+}
+.ui-datetime .header-nav .nav-icon .fa-today,
+.ui-datetime .header-nav .nav-icon .fa-next-week {
+  margin-top: 3px;
+}
+.ui-datetime .header-nav .nav-icon:hover {
+  opacity: 1;
+}
+.ui-datetime .picker-datetime-body {
+  padding: 15px;
+  overflow-y: auto;
+  /* Inputs for date and time */
+  /* Picker header */
+  /* Picker component */
+}
+.ui-datetime .picker-datetime-body table {
+  width: 245px;
+}
+.ui-datetime .picker-datetime-body .input-picker-datetime th {
+  text-align: left;
+}
+.ui-datetime .picker-datetime-body .input-picker-datetime .ui-datetime-date,
+.ui-datetime .picker-datetime-body .input-picker-datetime .ui-datetime-time {
+  width: 100px;
+}
+.ui-datetime .picker-datetime-body .input-picker-datetime .ui-datetime-single-input {
+  width: 245px;
+}
+.ui-datetime .picker-datetime-body .ui-datepicker-header {
+  margin-top: 15px;
+}
+.ui-datetime .picker-datetime-body .ui-datepicker-header .ui-datepicker-prev {
+  cursor: pointer;
+  float: left;
+}
+.ui-datetime .picker-datetime-body .ui-datepicker-header .ui-datepicker-next {
+  cursor: pointer;
+  float: right;
+}
+.ui-datetime .picker-datetime-body .ui-datepicker-header .ui-datepicker-title {
+  text-align: center;
+}
+.ui-datetime .picker-datetime-body .inline-picker {
+  margin-bottom: 5px;
+}
+.ui-datetime .picker-datetime-body .inline-picker .ui-datepicker-calendar {
+  margin: 0 auto;
+  margin-top: 9px;
+}
+.ui-datetime .picker-datetime-body .inline-picker .ui-datepicker-calendar th,
+.ui-datetime .picker-datetime-body .inline-picker .ui-datepicker-calendar td {
+  border: 1px solid #EEE;
+  padding: 6px;
+  text-align: center;
+}
+.ui-datetime .picker-datetime-body .inline-picker .ui-datepicker-calendar .ui-datepicker-current-day,
+.ui-datetime .picker-datetime-body .inline-picker .ui-datepicker-calendar .ui-datepicker-selected-day {
+  background-color: #F0F0F0;
+}
+.ui-datetime .picker-datetime-body .inline-picker .ui-datepicker-calendar .ui-datepicker-other-month a {
+  color: Gray;
+}
+.ui-datetime .picker-datetime-body .inline-picker .ui-datepicker-calendar .ui-picker-empty {
+  border: none;
+}
