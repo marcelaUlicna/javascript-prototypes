@@ -240,11 +240,13 @@ module Datepicker {
             this.timeInput = this.parent.find(".ui-datetime-time");
 
             var currentDate = this.picker.currentDate,
+                selectedDate = this.picker.selectedDate,
+                renderDate = currentDate ? currentDate : selectedDate,
                 dateFormat = this.picker.dateFormat,
                 timeFormat = this.picker.timeFormat;
 
-            this.dateInput.val(currentDate.format(dateFormat));
-            this.timeInput.val(currentDate.format(timeFormat));
+            this.dateInput.val(renderDate.format(dateFormat));
+            this.timeInput.val(renderDate.format(timeFormat));
 
             new Numeric.Spinner(this.dateInput, {
                 spinnerType: Numeric.DateSpinner,
