@@ -1,0 +1,41 @@
+.awesome-tree-view {
+  margin-top: 10px;
+}
+.awesome-tree-view li {
+  list-style-type: none;
+  cursor: pointer;
+  position: relative;
+  padding: 1px 0;
+}
+.awesome-tree-view li[data-list-type=file] {
+  cursor: default;
+}
+.awesome-tree-view li img {
+  margin-right: 5px;
+  margin-top: -8px;
+}
+.awesome-tree-view li i.fa {
+  margin-right: 5px;
+  width: 8px;
+}
+.awesome-tree-view .li-wrapper {
+  width: 100%;
+  height: 22px;
+  background-color: transparent;
+  position: absolute;
+  margin-top: -3px;
+  cursor: pointer;
+  margin-left: -5px;
+}
+/* custom tree style */
+.treeview-hower {
+  background: #e3edf9;
+  background: -moz-linear-gradient(top, #e3edf9 0%, #9cb7d8 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e3edf9), color-stop(100%, #9cb7d8));
+  background: -webkit-linear-gradient(top, #e3edf9 0%, #9cb7d8 100%);
+  background: -o-linear-gradient(top, #e3edf9 0%, #9cb7d8 100%);
+  background: -ms-linear-gradient(top, #e3edf9 0%, #9cb7d8 100%);
+  background: linear-gradient(to bottom, #e3edf9 0%, #9cb7d8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e3edf9', endColorstr='#9cb7d8', GradientType=0);
+  border-top: 1px solid #9cb7d8;
+}
