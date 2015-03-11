@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Tree view</title>
+    <link href="lib/css/bootstrap.css" rel="stylesheet">
+    <link href="lib/css/font-awesome.css" rel="stylesheet">
+	<link href="treeview.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">   
+            <div class="navbar-collapse collapse" style="border-bottom: 1px solid #ccc;">
+                <ul class="nav navbar-nav">
+                  <li><h2>TypeScript Tree view</h2></li>
+                </ul>
+                <div class="navbar-right navbar-buttons" style="margin-top: 20px;">
+                    <a href="index.html" rel="tooltip" class="btn btn-default btn-sm" style="border-radius: 50%;" data-toggle="tooltip" data-placement="bottom" title="Home page"><i class="glyphicon glyphicon-home"></i></a>
+                </div>
+              </div>
+            
+            
+            <div class="row list-content">
+				<div class="col-md-4">
+					<ul class="treeView1">
+						<li>
+							Projects
+							<ul>
+								<li>
+									Work
+									<ul>
+										<li>Testing</li>
+										<li>Contacts</li>
+										<li>Interview</li>
+									</ul>
+								</li>
+								<li>
+									Shopping
+									<ul>
+										<li>Honey</li>
+										<li>Butter</li>
+										<li>Bicycle</li>
+										<li>Watch</li>
+										<li>Book</li>
+									</ul>
+								</li>
+								<li>Description.txt</li>
+								<li>Settings.cs</li>
+								<li>Notes.avi</li>
+							</ul>
+						</li>
+						<li>
+							Application
+							<ul>
+								<li>
+									Source
+									<ul>
+										<li>index.html</li>
+										<li>server.js</li>
+										<li>treeview.ts</li>
+										<li>treeview.js.map</li>
+										<li>ts_compile.txt</li>
+										<li>demo.css</li>
+									</ul>
+								</li>
+								<li>instal.exe</li>
+								<li>demo.mkv</li>
+								<li>guide.pdf</li>
+								<li>guide in word.docx</li>
+								<li>instructions.mp3</li>
+								<li>user guide package.ZIP</li>
+								<li>.ignore</li>
+							</ul>
+						</li>
+						<li>
+							Images
+							<ul>
+								<li>bengal-cat-big-eyes.psd</li>
+								<li>bengal-cat-in-garden.jpg</li>
+								<li>bengal-cat-is-watching.jpg</li>
+								<li>black_cat.jpg</li>
+								<li>cute-bengat-cat-picture-wallpaper-8.jpg</li>
+								<li>focus-of-bengal.png</li>
+								<li>CheetahBotswana.png</li>
+								<li>pretty-bengal-cat.bmp</li>
+							</ul>
+						<li>notes.txt</li>
+						<li>Statistic.xls</li>
+						<li>Page visits.XLSX</li>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul class="treeView2">
+						<li>
+							Projects
+							<ul>
+								<li>
+									Work
+									<ul>
+										<li>Testing</li>
+										<li>Contacts</li>
+										<li>Interview</li>
+									</ul>
+								</li>
+								<li>
+									Shopping
+									<ul>
+										<li>Honey</li>
+										<li>Butter</li>
+										<li>Bicycle</li>
+										<li>Watch</li>
+										<li>Book</li>
+									</ul>
+								</li>
+								<li>Description</li>
+								<li>Settings</li>
+								<li>Notes</li>
+							</ul>
+						</li>
+						<li>
+							Images
+							<ul>
+								<li>bengal-cat-big-eyes.jpg</li>
+								<li>bengal-cat-in-garden.jpg</li>
+								<li>bengal-cat-is-watching.jpg</li>
+								<li>black_cat.jpg</li>
+								<li>cute-bengat-cat-picture-wallpaper-8.jpg</li>
+								<li>focus-of-bengal.jpg</li>
+								<li>CheetahBotswana.jpg</li>
+								<li>pretty-bengal-cat.jpg</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+	    </div>
+              
+        </div>
+
+	<script src="lib/js/jquery-2.1.1.js"></script>
+	<script src="treeview.plugin.js"></script>
+
+
+  <script type="text/javascript">
+      (function(){
+		  $(".treeView1").treeview({
+			  fileIcons: true,
+			  hoverClass: "treeview-hower",
+			  customIcons: {
+				  "jpg": "custom_icon/emotion_smile.png",
+				  "bmp": "custom_icon/flag_green.png"	
+			  }
+		  });
+
+		  $(".treeView2").treeview();
+
+		  /*$(".treeView2").treeview({
+			  icon: false,
+			  animation: false,
+			  expandAll: true,
+			  hoverClass: "treeview-hower"
+		  });*/
+
+      })();
+  </script>
+</body>
+</html>
