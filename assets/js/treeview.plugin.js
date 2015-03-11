@@ -69,7 +69,7 @@ var AwesomeTreeView;
             var listElements = element.find("li[data-level=1][data-list-type=folder]"), imageElements = listElements.find("> img"), arrowElements = listElements.find("> i.fa");
             if (imageElements && imageElements.length) {
                 imageElements.each(function (index, item) {
-                    $(item).removeClass("state-open").addClass("state-close").attr("src", "/../icon/directory.png");
+                    $(item).removeClass("state-open").addClass("state-close").attr("src", "/../prototypes/icon/directory.png");
                 });
             }
             else if (arrowElements && arrowElements.length) {
@@ -82,7 +82,7 @@ var AwesomeTreeView;
             element.parents("li").each(function (index, item) {
                 var it = $(item);
                 if (it.children("img")) {
-                    it.children("img").removeClass("state-close").addClass("state-open").attr("src", "/../icon/folder_open.png");
+                    it.children("img").removeClass("state-close").addClass("state-open").attr("src", "/../prototypes/icon/folder_open.png");
                     it.css({ "display": "list-item" });
                 }
                 else if (it.children("i.fa")) {
@@ -96,10 +96,10 @@ var AwesomeTreeView;
             img.toggleClass("state-open");
             img.toggleClass("state-close");
             if (img.hasClass("state-open")) {
-                img.attr("src", "/../icon/folder_open.png");
+                img.attr("src", "/../prototypes/icon/folder_open.png");
             }
             else {
-                img.attr("src", "/../icon/directory.png");
+                img.attr("src", "/../prototypes/icon/directory.png");
             }
         };
         // set appropriate arrow
@@ -117,32 +117,32 @@ var AwesomeTreeView;
         }
         IconType.defaultIcons = function () {
             return {
-                "css": "../icon/css.png",
-                "doc": "../icon/doc.png",
-                "docx": "../icon/doc.png",
-                "avi": "../icon/film.png",
-                "mkv": "../icon/film.png",
-                "mp4": "../icon/film.png",
-                "html": "../icon/html.png",
-                "java": "../icon/java.png",
-                "mp3": "../icon/music.png",
-                "wma": "../icon/music.png",
-                "pdf": "../icon/pdf.png",
-                "php": "../icon/php.png",
-                "jpg": "../icon/picture.png",
-                "jpeg": "../icon/picture.png",
-                "bmp": "../icon/picture.png",
-                "png": "../icon/picture.png",
-                "ppt": "../icon/ppt.png",
-                "psd": "../icon/psd.png",
-                "txt": "../icon/txt.png",
-                "xls": "../icon/xls.png",
-                "xlsx": "../icon/xls.png",
-                "zip": "../icon/zip.png",
-                "js": "../icon/script.png",
-                "ts": "../icon/script.png",
-                "cs": "../icon/code.png",
-                "exe": "../icon/application.png"
+                "css": "../prototypes/icon/css.png",
+                "doc": "../prototypes/icon/doc.png",
+                "docx": "../prototypes/icon/doc.png",
+                "avi": "../prototypes/icon/film.png",
+                "mkv": "../prototypes/icon/film.png",
+                "mp4": "../prototypes/icon/film.png",
+                "html": "../prototypes/icon/html.png",
+                "java": "../prototypes/icon/java.png",
+                "mp3": "../prototypes/icon/music.png",
+                "wma": "../prototypes/icon/music.png",
+                "pdf": "../prototypes/icon/pdf.png",
+                "php": "../prototypes/icon/php.png",
+                "jpg": "../prototypes/icon/picture.png",
+                "jpeg": "../prototypes/icon/picture.png",
+                "bmp": "../prototypes/icon/picture.png",
+                "png": "../prototypes/icon/picture.png",
+                "ppt": "../prototypes/icon/ppt.png",
+                "psd": "../prototypes/icon/psd.png",
+                "txt": "../prototypes/icon/txt.png",
+                "xls": "../prototypes/icon/xls.png",
+                "xlsx": "../prototypes/icon/xls.png",
+                "zip": "../prototypes/icon/zip.png",
+                "js": "../prototypes/icon/script.png",
+                "ts": "../prototypes/icon/script.png",
+                "cs": "../prototypes/icon/code.png",
+                "exe": "../prototypes/icon/application.png"
             };
         };
         return IconType;
@@ -279,7 +279,7 @@ var AwesomeTreeView;
         // render icon
         Icon.prototype.renderIcon = function (item, children) {
             item.find("img").remove();
-            var $icon, baseIcon = "<img src='/../icon/{{icon}}.png'/>";
+            var $icon, baseIcon = "<img src='/../prototypes/icon/{{icon}}.png'/>";
             if (children) {
                 $icon = $(baseIcon.replace("{{icon}}", "directory"));
             }
