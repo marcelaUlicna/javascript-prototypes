@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+    <meta name="generator" content="PSPad editor, www.pspad.com">
+    <title>Date formatter</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.css"/>
+    <link rel="stylesheet"
+          href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" href="lib/css/font-awesome.css">
+</head>
+<body>
+<div class="content">
+
+
+    <div class="container">
+        <div class="row">
+            <div class='col-sm-8'>
+                <h3>Date formatter page</h3>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Select country</label>
+                    <div class="col-sm-10">
+                        <select id="nationalitySelect">
+                            <option value="British">Great Britain</option>
+                            <option value="American">America</option>
+                            <option value="French">France</option>
+                            <option value="Spanish">Spain</option>
+                            <option value="Chinese">China</option>
+                            <option value="Czech">Czech Republic</option>
+                            <option value="Korean">Korea</option>
+                            <option value="Russian">Russia</option>
+                            <option value="Canadian">Canada</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px;">
+                    <div><strong>Culture:</strong> <span id="culture"></span></div>
+                    <div><strong>Timezone:</strong> <span id="timezone"></span></div>
+                    <div><strong>Offset:</strong> <span id="offset"></span> hours</div>
+                    <div><strong>UTC:</strong> <span id="utc"></span></div>
+                    <div><strong>Local:</strong> <span id="local"></span></div>
+                    <div><strong>Long date format:</strong> <span id="longDate"></span></div>
+                    <div><strong>Long time format:</strong> <span id="longTime"></span></div>
+                    <div><strong>Short date format:</strong> <span id="shortDate"></span></div>
+                    <div><strong>Short time format:</strong> <span id="shortTime"></span></div>
+                </div>
+
+                <h4>Date picker</h4>
+
+                <div>Time to date format (local): <span id="timeToDateFormatLocal"></span></div>
+                <div>Time to date format (utc): <span id="timeToDateFormatUtc"></span></div>
+
+                <div class="form-group">
+                    <div class='input-group date'>
+                        <input type='text' class="form-control" id='datetimepicker4' style="width: 300px;"/>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+        <script type="text/javascript" src="bower_components/moment/min/moment-with-locales.min.js"></script>
+        <script type="text/javascript" src="lib/js/bootstrap.js"></script>
+        <script type="text/javascript"
+                src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+
+        <script src="app.js"></script>
+        <script src="dateformat.js"></script>
+
+
+        <script type="text/javascript">
+            (function () {
+                var setUserProfile = function() {
+                    var utcDateString = "2015-03-17 10:41:00.0000000 +00:00";
+                    var date = new Date(utcDateString);
+                    var localDate = formatConventer.userTime(date);
+                    $("#utc").text(utcDateString);
+                    $("#local").text(localDate);
+                    $("#culture").text(User.Culture);
+                    $("#timezone").text(User.Timezone);
+                    $("#offset").text(User.OffsetHours);
+                    $("#longDate").text("(" + User.LongDate + ")  " + formatConventer.userTimeAndFormat(date, User.LongDate));
+                    $("#longTime").text("(" + User.LongTime + ")  " + formatConventer.userTimeAndFormat(date, User.LongTime));
+                    $("#shortDate").text("(" + User.ShortDate + ")  " + formatConventer.userTimeAndFormat(date, User.ShortDate));
+                    $("#shortTime").text("(" + User.ShortTime + ")  " + formatConventer.userTimeAndFormat(date, User.ShortTime));
+
+                    $('#datetimepicker4').datetimepicker().data().DateTimePicker.destroy();
+                    $('#datetimepicker4').val("");
+
+                    var format = formatConventer.userMomentFormat(User.FullLongFormat);
+                    $('#datetimepicker4').datetimepicker({
+                        format: format,
+                        sideBySide: true
+                    });
+
+                    $("#datetimepicker4").on("dp.change", function (e) {
+                        var localText = $(e.target).val();
+                        var localDate = moment(localText, format).toDate();
+                        var utcDate = formatConventer.utcFromUserTime(localDate);
+                        $("#timeToDateFormatLocal").text(localDate);
+                        $("#timeToDateFormatUtc").text(utcDate);
+                    });
+                };
+
+                $("#nationalitySelect").change(function(){
+                    var selectedUser = $("select option:selected").attr("value");
+                    User = TestUsers[selectedUser];
+
+                    setUserProfile();
+                });
+
+                setUserProfile();
+            })();
+        </script>
+
+</body>
+</html>
