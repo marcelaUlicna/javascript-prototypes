@@ -9,6 +9,13 @@ For the correct functionality of plugin it is necessary to create global object 
 * `IsDaylight` [boolean] - the culture daylight
 * `Offset` [number] - offset from utc timezone in milliseconds
 
+Example of getting offset in C#:
+```c#
+TimeZoneInfo tz = TimeZoneInfo.FindSystemTimeZoneById("Pacific Standard Time");
+double offset = tz.BaseUtcOffset.TotalMilliseconds;
+```
+
+
 Example of `User` object for `Pacific Standard Time` timezone (offset in hours: -8)
 ```javascript
 var User = {
