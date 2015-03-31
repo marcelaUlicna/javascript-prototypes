@@ -1,4 +1,7 @@
-// Test users
+/*
+* Test data for demonstration of various timezones and cultures
+*/
+
 var American = {
     Culture: "en-US",
     FullLongFormat: "dddd, MMMM d, yyyy h:mm:ss tt",
@@ -148,48 +151,4 @@ var User = TestUsers["British"];
  * 21600000 => +6 Timezone: "Bangladesh Standard Time"
  * -21600000 => -6 Timezone: "Central America Standard Time"
  * -28800000 => -8 Timezone: "Pacific Standard Time"
- */
-
-/** Culture
- * ====================================================
- * Culture: "en-US"
- * FullLongFormat: "dddd, MMMM d, yyyy h:mm:ss tt"
- * FullShortFormat: "M/d/yyyy h:mm tt"
- * LongDate: "dddd, MMMM d, yyyy"
- * LongTime: "h:mm:ss tt"
- * ShortDate: "M/d/yyyy"
- * ShortTime: "h:mm tt"
- */
-
-/** Culture
- * ====================================================
- * Culture: "fr-FR"
- * FullLongFormat: "dddd d MMMM yyyy HH:mm:ss"
- * FullShortFormat: "dd/MM/yyyy HH:mm"
- * LongDate: "dddd d MMMM yyyy"
- * LongTime: "HH:mm:ss"
- * ShortDate: "dd/MM/yyyy"
- * ShortTime: "HH:mm"
- */
-
-/** Culture
- * ====================================================
- * Culture: "es-ES"
- * FullLongFormat: "dddd, d' de 'MMMM' de 'yyyy H:mm:ss"
- * FullShortFormat: "dd/MM/yyyy H:mm"
- * LongDate: "dddd, d' de 'MMMM' de 'yyyy"
- * LongTime: "H:mm:ss"
- * ShortDate: "dd/MM/yyyy"
- * ShortTime: "H:mm"
- */
-
-/** Culture
- * ====================================================
- * Culture: "zh"
- * FullLongFormat: "yyyy'年'M'月'd'日' H:mm:ss"
- * FullShortFormat: "yyyy/M/d H:mm"
- * LongDate: "yyyy'年'M'月'd'日'"
- * LongTime: "H:mm:ss"
- * ShortDate: "yyyy/M/d"
- * ShortTime: "H:mm"
  */

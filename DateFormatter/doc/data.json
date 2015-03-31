@@ -1,0 +1,2370 @@
+{
+    "project": {},
+    "files": {
+        "bower_components\\eonasdan-bootstrap-datetimepicker\\src\\js\\bootstrap-datetimepicker.js": {
+            "name": "bower_components\\eonasdan-bootstrap-datetimepicker\\src\\js\\bootstrap-datetimepicker.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "bower_components\\jquery\\dist\\jquery.js": {
+            "name": "bower_components\\jquery\\dist\\jquery.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "bower_components\\jquery\\src\\ajax\\load.js": {
+            "name": "bower_components\\jquery\\src\\ajax\\load.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "bower_components\\jquery\\src\\core\\ready.js": {
+            "name": "bower_components\\jquery\\src\\core\\ready.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "bower_components\\jquery\\src\\css\\defaultDisplay.js": {
+            "name": "bower_components\\jquery\\src\\css\\defaultDisplay.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "bower_components\\jquery\\src\\data\\accepts.js": {
+            "name": "bower_components\\jquery\\src\\data\\accepts.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js": {
+            "name": "bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "bower_components\\jquery\\src\\offset.js": {
+            "name": "bower_components\\jquery\\src\\offset.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "bower_components\\moment\\locale\\lb.js": {
+            "name": "bower_components\\moment\\locale\\lb.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "bower_components\\moment\\min\\locales.js": {
+            "name": "bower_components\\moment\\min\\locales.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "bower_components\\moment\\min\\moment-with-locales.js": {
+            "name": "bower_components\\moment\\min\\moment-with-locales.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "bower_components\\moment\\moment.js": {
+            "name": "bower_components\\moment\\moment.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "dist\\dateformat.js": {
+            "name": "dist\\dateformat.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib\\js\\jquery-2.1.1.js": {
+            "name": "lib\\js\\jquery-2.1.1.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib\\js\\moment-with-locales.js": {
+            "name": "lib\\js\\moment-with-locales.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib\\js\\moment.js": {
+            "name": "lib\\js\\moment.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src\\app.js": {
+            "name": "src\\app.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src\\dateformat.js": {
+            "name": "src\\dateformat.js",
+            "modules": {},
+            "classes": {
+                "DateConventer": 1,
+                "DateFormat": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app.js": {
+            "name": "app.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "dateformat.js": {
+            "name": "dateformat.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "DateConventer": {
+            "name": "DateConventer",
+            "shortname": "DateConventer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src\\dateformat.js",
+            "line": 13,
+            "description": "This is a main class of whole component. Initializes plugin with public methods.",
+            "itemtype": "property",
+            "type": "DateFormat"
+        },
+        "DateFormat": {
+            "name": "DateFormat",
+            "shortname": "DateFormat",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src\\dateformat.js",
+            "line": 101,
+            "description": "Get a list of all tokens on the source that exist on the target,\nordered by reverse token length",
+            "itemtype": "property",
+            "type": "String[]"
+        }
+    },
+    "classitems": [
+        {
+            "file": "bower_components\\eonasdan-bootstrap-datetimepicker\\src\\js\\bootstrap-datetimepicker.js",
+            "line": 125,
+            "description": "Private functions",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\eonasdan-bootstrap-datetimepicker\\src\\js\\bootstrap-datetimepicker.js",
+            "line": 783,
+            "description": "Widget UI interaction functions",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\eonasdan-bootstrap-datetimepicker\\src\\js\\bootstrap-datetimepicker.js",
+            "line": 1204,
+            "description": "Public API functions\n =====================\nImportant: Do not expose direct references to private objects or the options\n object to the outer world. Always return a clone when returning values or make\n a clone when setting a private variable.",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\eonasdan-bootstrap-datetimepicker\\src\\js\\bootstrap-datetimepicker.js",
+            "line": 1885,
+            "description": "jQuery plugin constructor and defaults object",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 853,
+            "description": "Create key-value caches of limited size",
+            "return": {
+                "description": "Returns the Object data after storing it on itself with\n\tproperty name the (space-suffixed) string and (if the cache is larger than Expr.cacheLength)\n\tdeleting the oldest entry",
+                "type": "Function(string, Object)"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 873,
+            "description": "Mark a function for special use by Sizzle",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "The function to mark",
+                    "type": "Function"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 882,
+            "description": "Support testing using an element",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "Passed the created div and expects a boolean result",
+                    "type": "Function"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 903,
+            "description": "Adds the same handler for all of the specified attrs",
+            "params": [
+                {
+                    "name": "attrs",
+                    "description": "Pipe-separated list of attributes",
+                    "type": "String"
+                },
+                {
+                    "name": "handler",
+                    "description": "The method that will be applied",
+                    "type": "Function"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 917,
+            "description": "Checks document order of two siblings",
+            "params": [
+                {
+                    "name": "a",
+                    "description": "",
+                    "type": "Element"
+                },
+                {
+                    "name": "b",
+                    "description": "",
+                    "type": "Element"
+                }
+            ],
+            "return": {
+                "description": "Returns less than 0 if a precedes b, greater than 0 if a follows b",
+                "type": "Number"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 946,
+            "description": "Returns a function to use in pseudos for input types",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 957,
+            "description": "Returns a function to use in pseudos for buttons",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 968,
+            "description": "Returns a function to use in pseudos for positionals",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 990,
+            "description": "Checks a node for validity as a Sizzle context",
+            "params": [
+                {
+                    "name": "context",
+                    "description": "",
+                    "type": "Element|Object="
+                }
+            ],
+            "return": {
+                "description": "The input node if acceptable, otherwise a falsy value",
+                "type": "Element|Object|Boolean"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 1002,
+            "description": "Detects XML nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "An element or a document",
+                    "type": "Element|Object"
+                }
+            ],
+            "return": {
+                "description": "True iff elem is a non-HTML XML node",
+                "type": "Boolean"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 1014,
+            "description": "Sets document-related variables once based on the current document",
+            "params": [
+                {
+                    "name": "doc",
+                    "description": "An element or document object to use to set the document",
+                    "type": "Element|Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Returns the current document",
+                "type": "Object"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 1456,
+            "description": "Document sorting and removing duplicates",
+            "params": [
+                {
+                    "name": "results",
+                    "description": "",
+                    "type": "ArrayLike"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 1489,
+            "description": "Utility function for retrieving the text value of an array of DOM nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "",
+                    "type": "Array|Element"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 2462,
+            "description": "A low-level selection function that works with Sizzle's compiled\n selector functions",
+            "params": [
+                {
+                    "name": "selector",
+                    "description": "A selector or a pre-compiled\n selector function built with Sizzle.compile",
+                    "type": "String|Function"
+                },
+                {
+                    "name": "context",
+                    "description": "",
+                    "type": "Element"
+                },
+                {
+                    "name": "results",
+                    "description": "",
+                    "type": "Array",
+                    "optional": true
+                },
+                {
+                    "name": "seed",
+                    "description": "A set of elements to match against",
+                    "type": "Array",
+                    "optional": true
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 3422,
+            "description": "The ready event handler and self cleanup method",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 3515,
+            "description": "Determines whether an object can have data",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 5473,
+            "description": "Retrieve the actual display of a element",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "nodeName of the element",
+                    "type": "String"
+                },
+                {
+                    "name": "doc",
+                    "description": "Document object",
+                    "type": "Object"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 5497,
+            "description": "Try to determine the default display value of an element",
+            "params": [
+                {
+                    "name": "nodeName",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 8825,
+            "description": "Load a url into a page",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\dist\\jquery.js",
+            "line": 8909,
+            "description": "Gets a window from an element",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\ajax\\load.js",
+            "line": 15,
+            "description": "Load a url into a page",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\core\\ready.js",
+            "line": 61,
+            "description": "The ready event handler and self cleanup method",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\css\\defaultDisplay.js",
+            "line": 9,
+            "description": "Retrieve the actual display of a element",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "nodeName of the element",
+                    "type": "String"
+                },
+                {
+                    "name": "doc",
+                    "description": "Document object",
+                    "type": "Object"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\css\\defaultDisplay.js",
+            "line": 33,
+            "description": "Try to determine the default display value of an element",
+            "params": [
+                {
+                    "name": "nodeName",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\data\\accepts.js",
+            "line": 5,
+            "description": "Determines whether an object can have data",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js",
+            "line": 305,
+            "description": "Create key-value caches of limited size",
+            "return": {
+                "description": "Returns the Object data after storing it on itself with\n\tproperty name the (space-suffixed) string and (if the cache is larger than Expr.cacheLength)\n\tdeleting the oldest entry",
+                "type": "Function(string, Object)"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js",
+            "line": 325,
+            "description": "Mark a function for special use by Sizzle",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "The function to mark",
+                    "type": "Function"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js",
+            "line": 334,
+            "description": "Support testing using an element",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "Passed the created div and expects a boolean result",
+                    "type": "Function"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js",
+            "line": 355,
+            "description": "Adds the same handler for all of the specified attrs",
+            "params": [
+                {
+                    "name": "attrs",
+                    "description": "Pipe-separated list of attributes",
+                    "type": "String"
+                },
+                {
+                    "name": "handler",
+                    "description": "The method that will be applied",
+                    "type": "Function"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js",
+            "line": 369,
+            "description": "Checks document order of two siblings",
+            "params": [
+                {
+                    "name": "a",
+                    "description": "",
+                    "type": "Element"
+                },
+                {
+                    "name": "b",
+                    "description": "",
+                    "type": "Element"
+                }
+            ],
+            "return": {
+                "description": "Returns less than 0 if a precedes b, greater than 0 if a follows b",
+                "type": "Number"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js",
+            "line": 398,
+            "description": "Returns a function to use in pseudos for input types",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js",
+            "line": 409,
+            "description": "Returns a function to use in pseudos for buttons",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js",
+            "line": 420,
+            "description": "Returns a function to use in pseudos for positionals",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js",
+            "line": 442,
+            "description": "Checks a node for validity as a Sizzle context",
+            "params": [
+                {
+                    "name": "context",
+                    "description": "",
+                    "type": "Element|Object="
+                }
+            ],
+            "return": {
+                "description": "The input node if acceptable, otherwise a falsy value",
+                "type": "Element|Object|Boolean"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js",
+            "line": 454,
+            "description": "Detects XML nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "An element or a document",
+                    "type": "Element|Object"
+                }
+            ],
+            "return": {
+                "description": "True iff elem is a non-HTML XML node",
+                "type": "Boolean"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js",
+            "line": 466,
+            "description": "Sets document-related variables once based on the current document",
+            "params": [
+                {
+                    "name": "doc",
+                    "description": "An element or document object to use to set the document",
+                    "type": "Element|Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Returns the current document",
+                "type": "Object"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js",
+            "line": 908,
+            "description": "Document sorting and removing duplicates",
+            "params": [
+                {
+                    "name": "results",
+                    "description": "",
+                    "type": "ArrayLike"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js",
+            "line": 941,
+            "description": "Utility function for retrieving the text value of an array of DOM nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "",
+                    "type": "Array|Element"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js",
+            "line": 1914,
+            "description": "A low-level selection function that works with Sizzle's compiled\n selector functions",
+            "params": [
+                {
+                    "name": "selector",
+                    "description": "A selector or a pre-compiled\n selector function built with Sizzle.compile",
+                    "type": "String|Function"
+                },
+                {
+                    "name": "context",
+                    "description": "",
+                    "type": "Element"
+                },
+                {
+                    "name": "results",
+                    "description": "",
+                    "type": "Array",
+                    "optional": true
+                },
+                {
+                    "name": "seed",
+                    "description": "A set of elements to match against",
+                    "type": "Array",
+                    "optional": true
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\jquery\\src\\offset.js",
+            "line": 17,
+            "description": "Gets a window from an element",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\locale\\lb.js",
+            "line": 45,
+            "description": "Returns true if the word before the given number loses the '-n' ending.\ne.g. 'an 10 Deeg' but 'a 5 Deeg'",
+            "params": [
+                {
+                    "name": "number",
+                    "description": "",
+                    "type": "Integer"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\min\\locales.js",
+            "line": 4142,
+            "description": "Returns true if the word before the given number loses the '-n' ending.\ne.g. 'an 10 Deeg' but 'a 5 Deeg'",
+            "params": [
+                {
+                    "name": "number",
+                    "description": "",
+                    "type": "Integer"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\min\\moment-with-locales.js",
+            "line": 8,
+            "description": "Constants",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\min\\moment-with-locales.js",
+            "line": 415,
+            "description": "Constructors",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\min\\moment-with-locales.js",
+            "line": 474,
+            "description": "Helpers",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\min\\moment-with-locales.js",
+            "line": 856,
+            "description": "Locale",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\min\\moment-with-locales.js",
+            "line": 1068,
+            "description": "Formatting",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\min\\moment-with-locales.js",
+            "line": 1133,
+            "description": "Parsing",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\min\\moment-with-locales.js",
+            "line": 1748,
+            "description": "Relative Time",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\min\\moment-with-locales.js",
+            "line": 1785,
+            "description": "Week of Year",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\min\\moment-with-locales.js",
+            "line": 1833,
+            "description": "Top Level Functions",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\min\\moment-with-locales.js",
+            "line": 2189,
+            "description": "Moment Prototype",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\min\\moment-with-locales.js",
+            "line": 2753,
+            "description": "Duration Prototype",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\min\\moment-with-locales.js",
+            "line": 2986,
+            "description": "Default Locale",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\min\\moment-with-locales.js",
+            "line": 6817,
+            "description": "Returns true if the word before the given number loses the '-n' ending.\ne.g. 'an 10 Deeg' but 'a 5 Deeg'",
+            "params": [
+                {
+                    "name": "number",
+                    "description": "",
+                    "type": "Integer"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\min\\moment-with-locales.js",
+            "line": 9755,
+            "description": "Exposing Moment",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\moment.js",
+            "line": 8,
+            "description": "Constants",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\moment.js",
+            "line": 415,
+            "description": "Constructors",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\moment.js",
+            "line": 474,
+            "description": "Helpers",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\moment.js",
+            "line": 856,
+            "description": "Locale",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\moment.js",
+            "line": 1068,
+            "description": "Formatting",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\moment.js",
+            "line": 1133,
+            "description": "Parsing",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\moment.js",
+            "line": 1748,
+            "description": "Relative Time",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\moment.js",
+            "line": 1785,
+            "description": "Week of Year",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\moment.js",
+            "line": 1833,
+            "description": "Top Level Functions",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\moment.js",
+            "line": 2189,
+            "description": "Moment Prototype",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\moment.js",
+            "line": 2753,
+            "description": "Duration Prototype",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\moment.js",
+            "line": 2986,
+            "description": "Default Locale",
+            "class": "DateConventer"
+        },
+        {
+            "file": "bower_components\\moment\\moment.js",
+            "line": 3006,
+            "description": "Exposing Moment",
+            "class": "DateConventer"
+        },
+        {
+            "file": "dist\\dateformat.js",
+            "line": 1,
+            "description": "Created by MUlicna on 3/22/2015.",
+            "class": "DateConventer"
+        },
+        {
+            "file": "dist\\dateformat.js",
+            "line": 45,
+            "description": "Utc time in user format",
+            "class": "DateConventer"
+        },
+        {
+            "file": "dist\\dateformat.js",
+            "line": 51,
+            "description": "Locale time in user format",
+            "class": "DateConventer"
+        },
+        {
+            "file": "dist\\dateformat.js",
+            "line": 58,
+            "description": "Moment format for user - converts dotnet format to moment one",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 846,
+            "description": "Create key-value caches of limited size",
+            "return": {
+                "description": "Returns the Object data after storing it on itself with\n\tproperty name the (space-suffixed) string and (if the cache is larger than Expr.cacheLength)\n\tdeleting the oldest entry",
+                "type": "Function(string, Object)"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 866,
+            "description": "Mark a function for special use by Sizzle",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "The function to mark",
+                    "type": "Function"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 875,
+            "description": "Support testing using an element",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "Passed the created div and expects a boolean result",
+                    "type": "Function"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 896,
+            "description": "Adds the same handler for all of the specified attrs",
+            "params": [
+                {
+                    "name": "attrs",
+                    "description": "Pipe-separated list of attributes",
+                    "type": "String"
+                },
+                {
+                    "name": "handler",
+                    "description": "The method that will be applied",
+                    "type": "Function"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 910,
+            "description": "Checks document order of two siblings",
+            "params": [
+                {
+                    "name": "a",
+                    "description": "",
+                    "type": "Element"
+                },
+                {
+                    "name": "b",
+                    "description": "",
+                    "type": "Element"
+                }
+            ],
+            "return": {
+                "description": "Returns less than 0 if a precedes b, greater than 0 if a follows b",
+                "type": "Number"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 939,
+            "description": "Returns a function to use in pseudos for input types",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 950,
+            "description": "Returns a function to use in pseudos for buttons",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 961,
+            "description": "Returns a function to use in pseudos for positionals",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 983,
+            "description": "Checks a node for validity as a Sizzle context",
+            "params": [
+                {
+                    "name": "context",
+                    "description": "",
+                    "type": "Element|Object="
+                }
+            ],
+            "return": {
+                "description": "The input node if acceptable, otherwise a falsy value",
+                "type": "Element|Object|Boolean"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 995,
+            "description": "Detects XML nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "An element or a document",
+                    "type": "Element|Object"
+                }
+            ],
+            "return": {
+                "description": "True iff elem is a non-HTML XML node",
+                "type": "Boolean"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 1007,
+            "description": "Sets document-related variables once based on the current document",
+            "params": [
+                {
+                    "name": "doc",
+                    "description": "An element or document object to use to set the document",
+                    "type": "Element|Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Returns the current document",
+                "type": "Object"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 1440,
+            "description": "Document sorting and removing duplicates",
+            "params": [
+                {
+                    "name": "results",
+                    "description": "",
+                    "type": "ArrayLike"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 1473,
+            "description": "Utility function for retrieving the text value of an array of DOM nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "",
+                    "type": "Array|Element"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 2440,
+            "description": "A low-level selection function that works with Sizzle's compiled\n selector functions",
+            "params": [
+                {
+                    "name": "selector",
+                    "description": "A selector or a pre-compiled\n selector function built with Sizzle.compile",
+                    "type": "String|Function"
+                },
+                {
+                    "name": "context",
+                    "description": "",
+                    "type": "Element"
+                },
+                {
+                    "name": "results",
+                    "description": "",
+                    "type": "Array",
+                    "optional": true
+                },
+                {
+                    "name": "seed",
+                    "description": "A set of elements to match against",
+                    "type": "Array",
+                    "optional": true
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 3401,
+            "description": "The ready event handler and self cleanup method",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 3494,
+            "description": "Determines whether an object can have data",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 5454,
+            "description": "Retrieve the actual display of a element",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "nodeName of the element",
+                    "type": "String"
+                },
+                {
+                    "name": "doc",
+                    "description": "Document object",
+                    "type": "Object"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 5478,
+            "description": "Try to determine the default display value of an element",
+            "params": [
+                {
+                    "name": "nodeName",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 8823,
+            "description": "Load a url into a page",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\jquery-2.1.1.js",
+            "line": 8897,
+            "description": "Gets a window from an element",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment-with-locales.js",
+            "line": 8,
+            "description": "Constants",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment-with-locales.js",
+            "line": 360,
+            "description": "Constructors",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment-with-locales.js",
+            "line": 412,
+            "description": "Helpers",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment-with-locales.js",
+            "line": 779,
+            "description": "Locale",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment-with-locales.js",
+            "line": 967,
+            "description": "Formatting",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment-with-locales.js",
+            "line": 1032,
+            "description": "Parsing",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment-with-locales.js",
+            "line": 1613,
+            "description": "Relative Time",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment-with-locales.js",
+            "line": 1650,
+            "description": "Week of Year",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment-with-locales.js",
+            "line": 1698,
+            "description": "Top Level Functions",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment-with-locales.js",
+            "line": 2042,
+            "description": "Moment Prototype",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment-with-locales.js",
+            "line": 2527,
+            "description": "Duration Prototype",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment-with-locales.js",
+            "line": 2752,
+            "description": "Default Locale",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment-with-locales.js",
+            "line": 6266,
+            "description": "Returns true if the word before the given number loses the \"-n\" ending.\ne.g. \"an 10 Deeg\" but \"a 5 Deeg\"",
+            "params": [
+                {
+                    "name": "number",
+                    "description": "",
+                    "type": "Integer"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment-with-locales.js",
+            "line": 9035,
+            "description": "Exposing Moment",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment.js",
+            "line": 8,
+            "description": "Constants",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment.js",
+            "line": 360,
+            "description": "Constructors",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment.js",
+            "line": 412,
+            "description": "Helpers",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment.js",
+            "line": 779,
+            "description": "Locale",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment.js",
+            "line": 967,
+            "description": "Formatting",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment.js",
+            "line": 1032,
+            "description": "Parsing",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment.js",
+            "line": 1613,
+            "description": "Relative Time",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment.js",
+            "line": 1650,
+            "description": "Week of Year",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment.js",
+            "line": 1698,
+            "description": "Top Level Functions",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment.js",
+            "line": 2042,
+            "description": "Moment Prototype",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment.js",
+            "line": 2527,
+            "description": "Duration Prototype",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment.js",
+            "line": 2752,
+            "description": "Default Locale",
+            "class": "DateConventer"
+        },
+        {
+            "file": "lib\\js\\moment.js",
+            "line": 2771,
+            "description": "Exposing Moment",
+            "class": "DateConventer"
+        },
+        {
+            "file": "src\\app.js",
+            "line": 143,
+            "description": "=========================================================\n0 => 0 Timezone: \"UTC\"\n3600000 => +1 Timezone: \"Central Europe Standard Time\"\n10800000 => +3 Timezone: \"Russian Standard Time\"\n21600000 => +6 Timezone: \"Bangladesh Standard Time\"\n-21600000 => -6 Timezone: \"Central America Standard Time\"\n-28800000 => -8 Timezone: \"Pacific Standard Time\"",
+            "class": "DateConventer"
+        },
+        {
+            "file": "src\\app.js",
+            "line": 153,
+            "description": "====================================================\nCulture: \"en-US\"\nFullLongFormat: \"dddd, MMMM d, yyyy h:mm:ss tt\"\nFullShortFormat: \"M/d/yyyy h:mm tt\"\nLongDate: \"dddd, MMMM d, yyyy\"\nLongTime: \"h:mm:ss tt\"\nShortDate: \"M/d/yyyy\"\nShortTime: \"h:mm tt\"",
+            "class": "DateConventer"
+        },
+        {
+            "file": "src\\app.js",
+            "line": 164,
+            "description": "====================================================\nCulture: \"fr-FR\"\nFullLongFormat: \"dddd d MMMM yyyy HH:mm:ss\"\nFullShortFormat: \"dd/MM/yyyy HH:mm\"\nLongDate: \"dddd d MMMM yyyy\"\nLongTime: \"HH:mm:ss\"\nShortDate: \"dd/MM/yyyy\"\nShortTime: \"HH:mm\"",
+            "class": "DateConventer"
+        },
+        {
+            "file": "src\\app.js",
+            "line": 175,
+            "description": "====================================================\nCulture: \"es-ES\"\nFullLongFormat: \"dddd, d' de 'MMMM' de 'yyyy H:mm:ss\"\nFullShortFormat: \"dd/MM/yyyy H:mm\"\nLongDate: \"dddd, d' de 'MMMM' de 'yyyy\"\nLongTime: \"H:mm:ss\"\nShortDate: \"dd/MM/yyyy\"\nShortTime: \"H:mm\"",
+            "class": "DateConventer"
+        },
+        {
+            "file": "src\\app.js",
+            "line": 186,
+            "description": "====================================================\nCulture: \"zh\"\nFullLongFormat: \"yyyy'年'M'月'd'日' H:mm:ss\"\nFullShortFormat: \"yyyy/M/d H:mm\"\nLongDate: \"yyyy'年'M'月'd'日'\"\nLongTime: \"H:mm:ss\"\nShortDate: \"yyyy/M/d\"\nShortTime: \"H:mm\"",
+            "class": "DateConventer"
+        },
+        {
+            "file": "src\\dateformat.js",
+            "line": 1,
+            "description": "Created by MUlicna on 3/22/2015.",
+            "class": "DateConventer"
+        },
+        {
+            "file": "src\\dateformat.js",
+            "line": 23,
+            "description": "Converts UTC date time to local",
+            "itemtype": "method",
+            "name": "userTime",
+            "params": [
+                {
+                    "name": "date",
+                    "description": "- Date object in UTC",
+                    "type": "Date"
+                }
+            ],
+            "return": {
+                "description": "- Date time in local timezone",
+                "type": "Date"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "src\\dateformat.js",
+            "line": 44,
+            "description": "Converts local date time to UTC",
+            "itemtype": "method",
+            "name": "utcFromUserTime",
+            "params": [
+                {
+                    "name": "date",
+                    "description": "- Date object in local date time",
+                    "type": "Date"
+                }
+            ],
+            "return": {
+                "description": "- UTC date time",
+                "type": "Date"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "src\\dateformat.js",
+            "line": 64,
+            "description": "Gets string representation of date time based on user format",
+            "itemtype": "method",
+            "name": "utcUserFormat",
+            "params": [
+                {
+                    "name": "date",
+                    "description": "- Date time object",
+                    "type": "Date"
+                },
+                {
+                    "name": "format",
+                    "description": "- User date time format",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "- Date time in string format",
+                "type": "String"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "src\\dateformat.js",
+            "line": 75,
+            "description": "Converts UTC to local date time and gets string format representation\nof local date time based on user format",
+            "itemtype": "method",
+            "name": "userTimeAndFormat",
+            "params": [
+                {
+                    "name": "date",
+                    "description": "- Date time object in UTC",
+                    "type": "Date"
+                },
+                {
+                    "name": "format",
+                    "description": "- User date time format",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "- Date time in string format",
+                "type": "String"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "src\\dateformat.js",
+            "line": 88,
+            "description": "Momentjs format for user - converts .NET format to momentjs one",
+            "itemtype": "method",
+            "name": "userMomentFormat",
+            "params": [
+                {
+                    "name": "format",
+                    "description": "- .NET date time format",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "- Date time string format in momentjs format",
+                "type": "String"
+            },
+            "class": "DateConventer"
+        },
+        {
+            "file": "src\\dateformat.js",
+            "line": 192,
+            "description": "Converts .NET format to momentjs format",
+            "itemtype": "method",
+            "name": "convert",
+            "params": [
+                {
+                    "name": "format",
+                    "description": "- .NET format",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "- momentjs format",
+                "type": "String"
+            },
+            "class": "DateFormat"
+        },
+        {
+            "file": "src\\dateformat.js",
+            "line": 215,
+            "description": "Replaces .NET placeholder ' placeholder ' to momentjs placeholder [ placeholder ]",
+            "itemtype": "method",
+            "name": "createPlaceholder",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "token",
+                    "description": "- Token from .NET string format surrounded by commas, e.g. ' de '",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "- Placeholder that cannot be determined as a part of the date time format",
+                "type": "String"
+            },
+            "class": "DateFormat"
+        },
+        {
+            "file": "src\\dateformat.js",
+            "line": 236,
+            "description": "Gets tokens to be repalces",
+            "itemtype": "method",
+            "name": "getSortedTokens",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "sourceDefinition",
+                    "description": "- .NET array definitions",
+                    "type": "Any"
+                },
+                {
+                    "name": "targetDefinition",
+                    "description": "- momentjs array definitions",
+                    "type": "Any"
+                }
+            ],
+            "return": {
+                "description": "- Array of tokens that is used for converting to momentjs format",
+                "type": "IToken[]"
+            },
+            "class": "DateFormat"
+        },
+        {
+            "file": "app.js",
+            "line": 143,
+            "description": "=========================================================\n0 => 0 Timezone: \"UTC\"\n3600000 => +1 Timezone: \"Central Europe Standard Time\"\n10800000 => +3 Timezone: \"Russian Standard Time\"\n21600000 => +6 Timezone: \"Bangladesh Standard Time\"\n-21600000 => -6 Timezone: \"Central America Standard Time\"\n-28800000 => -8 Timezone: \"Pacific Standard Time\"",
+            "class": ""
+        },
+        {
+            "file": "app.js",
+            "line": 153,
+            "description": "====================================================\nCulture: \"en-US\"\nFullLongFormat: \"dddd, MMMM d, yyyy h:mm:ss tt\"\nFullShortFormat: \"M/d/yyyy h:mm tt\"\nLongDate: \"dddd, MMMM d, yyyy\"\nLongTime: \"h:mm:ss tt\"\nShortDate: \"M/d/yyyy\"\nShortTime: \"h:mm tt\"",
+            "class": ""
+        },
+        {
+            "file": "app.js",
+            "line": 164,
+            "description": "====================================================\nCulture: \"fr-FR\"\nFullLongFormat: \"dddd d MMMM yyyy HH:mm:ss\"\nFullShortFormat: \"dd/MM/yyyy HH:mm\"\nLongDate: \"dddd d MMMM yyyy\"\nLongTime: \"HH:mm:ss\"\nShortDate: \"dd/MM/yyyy\"\nShortTime: \"HH:mm\"",
+            "class": ""
+        },
+        {
+            "file": "app.js",
+            "line": 175,
+            "description": "====================================================\nCulture: \"es-ES\"\nFullLongFormat: \"dddd, d' de 'MMMM' de 'yyyy H:mm:ss\"\nFullShortFormat: \"dd/MM/yyyy H:mm\"\nLongDate: \"dddd, d' de 'MMMM' de 'yyyy\"\nLongTime: \"H:mm:ss\"\nShortDate: \"dd/MM/yyyy\"\nShortTime: \"H:mm\"",
+            "class": ""
+        },
+        {
+            "file": "app.js",
+            "line": 186,
+            "description": "====================================================\nCulture: \"zh\"\nFullLongFormat: \"yyyy'年'M'月'd'日' H:mm:ss\"\nFullShortFormat: \"yyyy/M/d H:mm\"\nLongDate: \"yyyy'年'M'月'd'日'\"\nLongTime: \"H:mm:ss\"\nShortDate: \"yyyy/M/d\"\nShortTime: \"H:mm\"",
+            "class": ""
+        },
+        {
+            "file": "dateformat.js",
+            "line": 1,
+            "description": "Created by MUlicna on 3/22/2015.",
+            "class": ""
+        },
+        {
+            "file": "dateformat.js",
+            "line": 45,
+            "description": "Utc time in user format",
+            "class": ""
+        },
+        {
+            "file": "dateformat.js",
+            "line": 51,
+            "description": "Locale time in user format",
+            "class": ""
+        },
+        {
+            "file": "dateformat.js",
+            "line": 58,
+            "description": "Moment format for user - converts dotnet format to moment one",
+            "class": ""
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " bower_components\\jquery\\dist\\jquery.js:853"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " bower_components\\jquery\\dist\\jquery.js:917"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " bower_components\\jquery\\dist\\jquery.js:990"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " bower_components\\jquery\\dist\\jquery.js:1002"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " bower_components\\jquery\\dist\\jquery.js:1014"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:305"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:369"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:442"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:454"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:466"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " bower_components\\moment\\locale\\lb.js:45"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " bower_components\\moment\\min\\locales.js:4142"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " bower_components\\moment\\min\\moment-with-locales.js:6817"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib\\js\\jquery-2.1.1.js:846"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib\\js\\jquery-2.1.1.js:910"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib\\js\\jquery-2.1.1.js:983"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib\\js\\jquery-2.1.1.js:995"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib\\js\\jquery-2.1.1.js:1007"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " lib\\js\\moment-with-locales.js:6266"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " src\\dateformat.js:23"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " src\\dateformat.js:44"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " src\\dateformat.js:64"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " src\\dateformat.js:75"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " src\\dateformat.js:88"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " src\\dateformat.js:192"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " src\\dateformat.js:215"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " src\\dateformat.js:236"
+        },
+        {
+            "message": "Missing item type\nPrivate functions",
+            "line": " bower_components\\eonasdan-bootstrap-datetimepicker\\src\\js\\bootstrap-datetimepicker.js:125"
+        },
+        {
+            "message": "Missing item type\nWidget UI interaction functions",
+            "line": " bower_components\\eonasdan-bootstrap-datetimepicker\\src\\js\\bootstrap-datetimepicker.js:783"
+        },
+        {
+            "message": "Missing item type\nPublic API functions\n =====================\nImportant: Do not expose direct references to private objects or the options\n object to the outer world. Always return a clone when returning values or make\n a clone when setting a private variable.",
+            "line": " bower_components\\eonasdan-bootstrap-datetimepicker\\src\\js\\bootstrap-datetimepicker.js:1204"
+        },
+        {
+            "message": "Missing item type\njQuery plugin constructor and defaults object",
+            "line": " bower_components\\eonasdan-bootstrap-datetimepicker\\src\\js\\bootstrap-datetimepicker.js:1885"
+        },
+        {
+            "message": "Missing item type\nCreate key-value caches of limited size",
+            "line": " bower_components\\jquery\\dist\\jquery.js:853"
+        },
+        {
+            "message": "Missing item type\nMark a function for special use by Sizzle",
+            "line": " bower_components\\jquery\\dist\\jquery.js:873"
+        },
+        {
+            "message": "Missing item type\nSupport testing using an element",
+            "line": " bower_components\\jquery\\dist\\jquery.js:882"
+        },
+        {
+            "message": "Missing item type\nAdds the same handler for all of the specified attrs",
+            "line": " bower_components\\jquery\\dist\\jquery.js:903"
+        },
+        {
+            "message": "Missing item type\nChecks document order of two siblings",
+            "line": " bower_components\\jquery\\dist\\jquery.js:917"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for input types",
+            "line": " bower_components\\jquery\\dist\\jquery.js:946"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for buttons",
+            "line": " bower_components\\jquery\\dist\\jquery.js:957"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for positionals",
+            "line": " bower_components\\jquery\\dist\\jquery.js:968"
+        },
+        {
+            "message": "Missing item type\nChecks a node for validity as a Sizzle context",
+            "line": " bower_components\\jquery\\dist\\jquery.js:990"
+        },
+        {
+            "message": "Missing item type\nDetects XML nodes",
+            "line": " bower_components\\jquery\\dist\\jquery.js:1002"
+        },
+        {
+            "message": "Missing item type\nSets document-related variables once based on the current document",
+            "line": " bower_components\\jquery\\dist\\jquery.js:1014"
+        },
+        {
+            "message": "Missing item type\nDocument sorting and removing duplicates",
+            "line": " bower_components\\jquery\\dist\\jquery.js:1456"
+        },
+        {
+            "message": "Missing item type\nUtility function for retrieving the text value of an array of DOM nodes",
+            "line": " bower_components\\jquery\\dist\\jquery.js:1489"
+        },
+        {
+            "message": "Missing item type\nA low-level selection function that works with Sizzle's compiled\n selector functions",
+            "line": " bower_components\\jquery\\dist\\jquery.js:2462"
+        },
+        {
+            "message": "Missing item type\nThe ready event handler and self cleanup method",
+            "line": " bower_components\\jquery\\dist\\jquery.js:3422"
+        },
+        {
+            "message": "Missing item type\nDetermines whether an object can have data",
+            "line": " bower_components\\jquery\\dist\\jquery.js:3515"
+        },
+        {
+            "message": "Missing item type\nRetrieve the actual display of a element",
+            "line": " bower_components\\jquery\\dist\\jquery.js:5473"
+        },
+        {
+            "message": "Missing item type\nTry to determine the default display value of an element",
+            "line": " bower_components\\jquery\\dist\\jquery.js:5497"
+        },
+        {
+            "message": "Missing item type\nLoad a url into a page",
+            "line": " bower_components\\jquery\\dist\\jquery.js:8825"
+        },
+        {
+            "message": "Missing item type\nGets a window from an element",
+            "line": " bower_components\\jquery\\dist\\jquery.js:8909"
+        },
+        {
+            "message": "Missing item type\nLoad a url into a page",
+            "line": " bower_components\\jquery\\src\\ajax\\load.js:15"
+        },
+        {
+            "message": "Missing item type\nThe ready event handler and self cleanup method",
+            "line": " bower_components\\jquery\\src\\core\\ready.js:61"
+        },
+        {
+            "message": "Missing item type\nRetrieve the actual display of a element",
+            "line": " bower_components\\jquery\\src\\css\\defaultDisplay.js:9"
+        },
+        {
+            "message": "Missing item type\nTry to determine the default display value of an element",
+            "line": " bower_components\\jquery\\src\\css\\defaultDisplay.js:33"
+        },
+        {
+            "message": "Missing item type\nDetermines whether an object can have data",
+            "line": " bower_components\\jquery\\src\\data\\accepts.js:5"
+        },
+        {
+            "message": "Missing item type\nCreate key-value caches of limited size",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:305"
+        },
+        {
+            "message": "Missing item type\nMark a function for special use by Sizzle",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:325"
+        },
+        {
+            "message": "Missing item type\nSupport testing using an element",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:334"
+        },
+        {
+            "message": "Missing item type\nAdds the same handler for all of the specified attrs",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:355"
+        },
+        {
+            "message": "Missing item type\nChecks document order of two siblings",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:369"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for input types",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:398"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for buttons",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:409"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for positionals",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:420"
+        },
+        {
+            "message": "Missing item type\nChecks a node for validity as a Sizzle context",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:442"
+        },
+        {
+            "message": "Missing item type\nDetects XML nodes",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:454"
+        },
+        {
+            "message": "Missing item type\nSets document-related variables once based on the current document",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:466"
+        },
+        {
+            "message": "Missing item type\nDocument sorting and removing duplicates",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:908"
+        },
+        {
+            "message": "Missing item type\nUtility function for retrieving the text value of an array of DOM nodes",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:941"
+        },
+        {
+            "message": "Missing item type\nA low-level selection function that works with Sizzle's compiled\n selector functions",
+            "line": " bower_components\\jquery\\src\\sizzle\\dist\\sizzle.js:1914"
+        },
+        {
+            "message": "Missing item type\nGets a window from an element",
+            "line": " bower_components\\jquery\\src\\offset.js:17"
+        },
+        {
+            "message": "Missing item type\nReturns true if the word before the given number loses the '-n' ending.\ne.g. 'an 10 Deeg' but 'a 5 Deeg'",
+            "line": " bower_components\\moment\\locale\\lb.js:45"
+        },
+        {
+            "message": "Missing item type\nReturns true if the word before the given number loses the '-n' ending.\ne.g. 'an 10 Deeg' but 'a 5 Deeg'",
+            "line": " bower_components\\moment\\min\\locales.js:4142"
+        },
+        {
+            "message": "Missing item type\nConstants",
+            "line": " bower_components\\moment\\min\\moment-with-locales.js:8"
+        },
+        {
+            "message": "Missing item type\nConstructors",
+            "line": " bower_components\\moment\\min\\moment-with-locales.js:415"
+        },
+        {
+            "message": "Missing item type\nHelpers",
+            "line": " bower_components\\moment\\min\\moment-with-locales.js:474"
+        },
+        {
+            "message": "Missing item type\nLocale",
+            "line": " bower_components\\moment\\min\\moment-with-locales.js:856"
+        },
+        {
+            "message": "Missing item type\nFormatting",
+            "line": " bower_components\\moment\\min\\moment-with-locales.js:1068"
+        },
+        {
+            "message": "Missing item type\nParsing",
+            "line": " bower_components\\moment\\min\\moment-with-locales.js:1133"
+        },
+        {
+            "message": "Missing item type\nRelative Time",
+            "line": " bower_components\\moment\\min\\moment-with-locales.js:1748"
+        },
+        {
+            "message": "Missing item type\nWeek of Year",
+            "line": " bower_components\\moment\\min\\moment-with-locales.js:1785"
+        },
+        {
+            "message": "Missing item type\nTop Level Functions",
+            "line": " bower_components\\moment\\min\\moment-with-locales.js:1833"
+        },
+        {
+            "message": "Missing item type\nMoment Prototype",
+            "line": " bower_components\\moment\\min\\moment-with-locales.js:2189"
+        },
+        {
+            "message": "Missing item type\nDuration Prototype",
+            "line": " bower_components\\moment\\min\\moment-with-locales.js:2753"
+        },
+        {
+            "message": "Missing item type\nDefault Locale",
+            "line": " bower_components\\moment\\min\\moment-with-locales.js:2986"
+        },
+        {
+            "message": "Missing item type\nReturns true if the word before the given number loses the '-n' ending.\ne.g. 'an 10 Deeg' but 'a 5 Deeg'",
+            "line": " bower_components\\moment\\min\\moment-with-locales.js:6817"
+        },
+        {
+            "message": "Missing item type\nExposing Moment",
+            "line": " bower_components\\moment\\min\\moment-with-locales.js:9755"
+        },
+        {
+            "message": "Missing item type\nConstants",
+            "line": " bower_components\\moment\\moment.js:8"
+        },
+        {
+            "message": "Missing item type\nConstructors",
+            "line": " bower_components\\moment\\moment.js:415"
+        },
+        {
+            "message": "Missing item type\nHelpers",
+            "line": " bower_components\\moment\\moment.js:474"
+        },
+        {
+            "message": "Missing item type\nLocale",
+            "line": " bower_components\\moment\\moment.js:856"
+        },
+        {
+            "message": "Missing item type\nFormatting",
+            "line": " bower_components\\moment\\moment.js:1068"
+        },
+        {
+            "message": "Missing item type\nParsing",
+            "line": " bower_components\\moment\\moment.js:1133"
+        },
+        {
+            "message": "Missing item type\nRelative Time",
+            "line": " bower_components\\moment\\moment.js:1748"
+        },
+        {
+            "message": "Missing item type\nWeek of Year",
+            "line": " bower_components\\moment\\moment.js:1785"
+        },
+        {
+            "message": "Missing item type\nTop Level Functions",
+            "line": " bower_components\\moment\\moment.js:1833"
+        },
+        {
+            "message": "Missing item type\nMoment Prototype",
+            "line": " bower_components\\moment\\moment.js:2189"
+        },
+        {
+            "message": "Missing item type\nDuration Prototype",
+            "line": " bower_components\\moment\\moment.js:2753"
+        },
+        {
+            "message": "Missing item type\nDefault Locale",
+            "line": " bower_components\\moment\\moment.js:2986"
+        },
+        {
+            "message": "Missing item type\nExposing Moment",
+            "line": " bower_components\\moment\\moment.js:3006"
+        },
+        {
+            "message": "Missing item type\nCreated by MUlicna on 3/22/2015.",
+            "line": " dist\\dateformat.js:1"
+        },
+        {
+            "message": "Missing item type\nUtc time in user format",
+            "line": " dist\\dateformat.js:45"
+        },
+        {
+            "message": "Missing item type\nLocale time in user format",
+            "line": " dist\\dateformat.js:51"
+        },
+        {
+            "message": "Missing item type\nMoment format for user - converts dotnet format to moment one",
+            "line": " dist\\dateformat.js:58"
+        },
+        {
+            "message": "Missing item type\nCreate key-value caches of limited size",
+            "line": " lib\\js\\jquery-2.1.1.js:846"
+        },
+        {
+            "message": "Missing item type\nMark a function for special use by Sizzle",
+            "line": " lib\\js\\jquery-2.1.1.js:866"
+        },
+        {
+            "message": "Missing item type\nSupport testing using an element",
+            "line": " lib\\js\\jquery-2.1.1.js:875"
+        },
+        {
+            "message": "Missing item type\nAdds the same handler for all of the specified attrs",
+            "line": " lib\\js\\jquery-2.1.1.js:896"
+        },
+        {
+            "message": "Missing item type\nChecks document order of two siblings",
+            "line": " lib\\js\\jquery-2.1.1.js:910"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for input types",
+            "line": " lib\\js\\jquery-2.1.1.js:939"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for buttons",
+            "line": " lib\\js\\jquery-2.1.1.js:950"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for positionals",
+            "line": " lib\\js\\jquery-2.1.1.js:961"
+        },
+        {
+            "message": "Missing item type\nChecks a node for validity as a Sizzle context",
+            "line": " lib\\js\\jquery-2.1.1.js:983"
+        },
+        {
+            "message": "Missing item type\nDetects XML nodes",
+            "line": " lib\\js\\jquery-2.1.1.js:995"
+        },
+        {
+            "message": "Missing item type\nSets document-related variables once based on the current document",
+            "line": " lib\\js\\jquery-2.1.1.js:1007"
+        },
+        {
+            "message": "Missing item type\nDocument sorting and removing duplicates",
+            "line": " lib\\js\\jquery-2.1.1.js:1440"
+        },
+        {
+            "message": "Missing item type\nUtility function for retrieving the text value of an array of DOM nodes",
+            "line": " lib\\js\\jquery-2.1.1.js:1473"
+        },
+        {
+            "message": "Missing item type\nA low-level selection function that works with Sizzle's compiled\n selector functions",
+            "line": " lib\\js\\jquery-2.1.1.js:2440"
+        },
+        {
+            "message": "Missing item type\nThe ready event handler and self cleanup method",
+            "line": " lib\\js\\jquery-2.1.1.js:3401"
+        },
+        {
+            "message": "Missing item type\nDetermines whether an object can have data",
+            "line": " lib\\js\\jquery-2.1.1.js:3494"
+        },
+        {
+            "message": "Missing item type\nRetrieve the actual display of a element",
+            "line": " lib\\js\\jquery-2.1.1.js:5454"
+        },
+        {
+            "message": "Missing item type\nTry to determine the default display value of an element",
+            "line": " lib\\js\\jquery-2.1.1.js:5478"
+        },
+        {
+            "message": "Missing item type\nLoad a url into a page",
+            "line": " lib\\js\\jquery-2.1.1.js:8823"
+        },
+        {
+            "message": "Missing item type\nGets a window from an element",
+            "line": " lib\\js\\jquery-2.1.1.js:8897"
+        },
+        {
+            "message": "Missing item type\nConstants",
+            "line": " lib\\js\\moment-with-locales.js:8"
+        },
+        {
+            "message": "Missing item type\nConstructors",
+            "line": " lib\\js\\moment-with-locales.js:360"
+        },
+        {
+            "message": "Missing item type\nHelpers",
+            "line": " lib\\js\\moment-with-locales.js:412"
+        },
+        {
+            "message": "Missing item type\nLocale",
+            "line": " lib\\js\\moment-with-locales.js:779"
+        },
+        {
+            "message": "Missing item type\nFormatting",
+            "line": " lib\\js\\moment-with-locales.js:967"
+        },
+        {
+            "message": "Missing item type\nParsing",
+            "line": " lib\\js\\moment-with-locales.js:1032"
+        },
+        {
+            "message": "Missing item type\nRelative Time",
+            "line": " lib\\js\\moment-with-locales.js:1613"
+        },
+        {
+            "message": "Missing item type\nWeek of Year",
+            "line": " lib\\js\\moment-with-locales.js:1650"
+        },
+        {
+            "message": "Missing item type\nTop Level Functions",
+            "line": " lib\\js\\moment-with-locales.js:1698"
+        },
+        {
+            "message": "Missing item type\nMoment Prototype",
+            "line": " lib\\js\\moment-with-locales.js:2042"
+        },
+        {
+            "message": "Missing item type\nDuration Prototype",
+            "line": " lib\\js\\moment-with-locales.js:2527"
+        },
+        {
+            "message": "Missing item type\nDefault Locale",
+            "line": " lib\\js\\moment-with-locales.js:2752"
+        },
+        {
+            "message": "Missing item type\nReturns true if the word before the given number loses the \"-n\" ending.\ne.g. \"an 10 Deeg\" but \"a 5 Deeg\"",
+            "line": " lib\\js\\moment-with-locales.js:6266"
+        },
+        {
+            "message": "Missing item type\nExposing Moment",
+            "line": " lib\\js\\moment-with-locales.js:9035"
+        },
+        {
+            "message": "Missing item type\nConstants",
+            "line": " lib\\js\\moment.js:8"
+        },
+        {
+            "message": "Missing item type\nConstructors",
+            "line": " lib\\js\\moment.js:360"
+        },
+        {
+            "message": "Missing item type\nHelpers",
+            "line": " lib\\js\\moment.js:412"
+        },
+        {
+            "message": "Missing item type\nLocale",
+            "line": " lib\\js\\moment.js:779"
+        },
+        {
+            "message": "Missing item type\nFormatting",
+            "line": " lib\\js\\moment.js:967"
+        },
+        {
+            "message": "Missing item type\nParsing",
+            "line": " lib\\js\\moment.js:1032"
+        },
+        {
+            "message": "Missing item type\nRelative Time",
+            "line": " lib\\js\\moment.js:1613"
+        },
+        {
+            "message": "Missing item type\nWeek of Year",
+            "line": " lib\\js\\moment.js:1650"
+        },
+        {
+            "message": "Missing item type\nTop Level Functions",
+            "line": " lib\\js\\moment.js:1698"
+        },
+        {
+            "message": "Missing item type\nMoment Prototype",
+            "line": " lib\\js\\moment.js:2042"
+        },
+        {
+            "message": "Missing item type\nDuration Prototype",
+            "line": " lib\\js\\moment.js:2527"
+        },
+        {
+            "message": "Missing item type\nDefault Locale",
+            "line": " lib\\js\\moment.js:2752"
+        },
+        {
+            "message": "Missing item type\nExposing Moment",
+            "line": " lib\\js\\moment.js:2771"
+        },
+        {
+            "message": "Missing item type\n=========================================================\n0 => 0 Timezone: \"UTC\"\n3600000 => +1 Timezone: \"Central Europe Standard Time\"\n10800000 => +3 Timezone: \"Russian Standard Time\"\n21600000 => +6 Timezone: \"Bangladesh Standard Time\"\n-21600000 => -6 Timezone: \"Central America Standard Time\"\n-28800000 => -8 Timezone: \"Pacific Standard Time\"",
+            "line": " src\\app.js:143"
+        },
+        {
+            "message": "Missing item type\n====================================================\nCulture: \"en-US\"\nFullLongFormat: \"dddd, MMMM d, yyyy h:mm:ss tt\"\nFullShortFormat: \"M/d/yyyy h:mm tt\"\nLongDate: \"dddd, MMMM d, yyyy\"\nLongTime: \"h:mm:ss tt\"\nShortDate: \"M/d/yyyy\"\nShortTime: \"h:mm tt\"",
+            "line": " src\\app.js:153"
+        },
+        {
+            "message": "Missing item type\n====================================================\nCulture: \"fr-FR\"\nFullLongFormat: \"dddd d MMMM yyyy HH:mm:ss\"\nFullShortFormat: \"dd/MM/yyyy HH:mm\"\nLongDate: \"dddd d MMMM yyyy\"\nLongTime: \"HH:mm:ss\"\nShortDate: \"dd/MM/yyyy\"\nShortTime: \"HH:mm\"",
+            "line": " src\\app.js:164"
+        },
+        {
+            "message": "Missing item type\n====================================================\nCulture: \"es-ES\"\nFullLongFormat: \"dddd, d' de 'MMMM' de 'yyyy H:mm:ss\"\nFullShortFormat: \"dd/MM/yyyy H:mm\"\nLongDate: \"dddd, d' de 'MMMM' de 'yyyy\"\nLongTime: \"H:mm:ss\"\nShortDate: \"dd/MM/yyyy\"\nShortTime: \"H:mm\"",
+            "line": " src\\app.js:175"
+        },
+        {
+            "message": "Missing item type\n====================================================\nCulture: \"zh\"\nFullLongFormat: \"yyyy'年'M'月'd'日' H:mm:ss\"\nFullShortFormat: \"yyyy/M/d H:mm\"\nLongDate: \"yyyy'年'M'月'd'日'\"\nLongTime: \"H:mm:ss\"\nShortDate: \"yyyy/M/d\"\nShortTime: \"H:mm\"",
+            "line": " src\\app.js:186"
+        },
+        {
+            "message": "Missing item type\nCreated by MUlicna on 3/22/2015.",
+            "line": " src\\dateformat.js:1"
+        },
+        {
+            "message": "Missing item type\n=========================================================\n0 => 0 Timezone: \"UTC\"\n3600000 => +1 Timezone: \"Central Europe Standard Time\"\n10800000 => +3 Timezone: \"Russian Standard Time\"\n21600000 => +6 Timezone: \"Bangladesh Standard Time\"\n-21600000 => -6 Timezone: \"Central America Standard Time\"\n-28800000 => -8 Timezone: \"Pacific Standard Time\"",
+            "line": " app.js:143"
+        },
+        {
+            "message": "Missing item type\n====================================================\nCulture: \"en-US\"\nFullLongFormat: \"dddd, MMMM d, yyyy h:mm:ss tt\"\nFullShortFormat: \"M/d/yyyy h:mm tt\"\nLongDate: \"dddd, MMMM d, yyyy\"\nLongTime: \"h:mm:ss tt\"\nShortDate: \"M/d/yyyy\"\nShortTime: \"h:mm tt\"",
+            "line": " app.js:153"
+        },
+        {
+            "message": "Missing item type\n====================================================\nCulture: \"fr-FR\"\nFullLongFormat: \"dddd d MMMM yyyy HH:mm:ss\"\nFullShortFormat: \"dd/MM/yyyy HH:mm\"\nLongDate: \"dddd d MMMM yyyy\"\nLongTime: \"HH:mm:ss\"\nShortDate: \"dd/MM/yyyy\"\nShortTime: \"HH:mm\"",
+            "line": " app.js:164"
+        },
+        {
+            "message": "Missing item type\n====================================================\nCulture: \"es-ES\"\nFullLongFormat: \"dddd, d' de 'MMMM' de 'yyyy H:mm:ss\"\nFullShortFormat: \"dd/MM/yyyy H:mm\"\nLongDate: \"dddd, d' de 'MMMM' de 'yyyy\"\nLongTime: \"H:mm:ss\"\nShortDate: \"dd/MM/yyyy\"\nShortTime: \"H:mm\"",
+            "line": " app.js:175"
+        },
+        {
+            "message": "Missing item type\n====================================================\nCulture: \"zh\"\nFullLongFormat: \"yyyy'年'M'月'd'日' H:mm:ss\"\nFullShortFormat: \"yyyy/M/d H:mm\"\nLongDate: \"yyyy'年'M'月'd'日'\"\nLongTime: \"H:mm:ss\"\nShortDate: \"yyyy/M/d\"\nShortTime: \"H:mm\"",
+            "line": " app.js:186"
+        },
+        {
+            "message": "Missing item type\nCreated by MUlicna on 3/22/2015.",
+            "line": " dateformat.js:1"
+        },
+        {
+            "message": "Missing item type\nUtc time in user format",
+            "line": " dateformat.js:45"
+        },
+        {
+            "message": "Missing item type\nLocale time in user format",
+            "line": " dateformat.js:51"
+        },
+        {
+            "message": "Missing item type\nMoment format for user - converts dotnet format to moment one",
+            "line": " dateformat.js:58"
+        }
+    ]
+}

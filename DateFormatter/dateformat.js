@@ -1,18 +1,32 @@
 /**
  * Created by MUlicna on 3/22/2015.
  */
+/// #source 1 1 /dateFormat.js
+/// external component to convert .net / momentjs datetime formats
+/// https://github.com/stevegreatrex/DateFormat
 ///<reference path="typing/jquery.d.ts" />
 ///<reference path="typing/moment.d.ts" />
 ///<reference path="typing/app.d.ts" />
 var DateFormatter;
 (function (DateFormatter) {
     "use strict";
+    /**
+     * This is a main class of whole component. Initializes plugin with public methods.
+     *
+     * @class DateConventer
+     * @property {DateFormat} dateFormat - Momentjs and .NET formats
+     */
     var DateConventer = (function () {
         function DateConventer() {
             this.dateFormat = new DateFormat();
         }
-        /*
-        * Local user time from UTC
+        /**
+        * Converts UTC date time to local
+         *
+         * @method userTime
+         *
+         * @param {Date} date - Date object in UTC
+         * @returns {Date} - Date time in local timezone
         */
         DateConventer.prototype.userTime = function (date) {
             try {
@@ -27,8 +41,13 @@ var DateFormatter;
                 return date;
             }
         };
-        /*
-         * UTC time from local user time
+        /**
+         * Converts local date time to UTC
+         *
+         * @method utcFromUserTime
+         *
+         * @param {Date} date - Date object in local date time
+         * @returns {Date} - UTC date time
          */
         DateConventer.prototype.utcFromUserTime = function (date) {
             var offsetMs = date.getTimezoneOffset() * 60000;
@@ -43,20 +62,35 @@ var DateFormatter;
             }
         };
         /**
-         * Utc time in user format
+         * Gets string representation of date time based on user format
+         *
+         * @method utcUserFormat
+         * @param {Date} date - Date time object
+         * @param {string} format - User date time format
+         * @returns {string} - Date time in string format
          */
         DateConventer.prototype.utcUserFormat = function (date, format) {
             return moment(date).format(this.dateFormat.convert(format));
         };
         /**
-         * Locale time in user format
+         * Converts UTC to local date time and gets string format representation
+         * of local date time based on user format
+         *
+         * @method userTimeAndFormat
+         * @param {Date} date - Date time object in UTC
+         * @param {string} format - User date time format
+         * @returns {string} - Date time in string format
          */
         DateConventer.prototype.userTimeAndFormat = function (date, format) {
             var ut = this.userTime(date);
             return moment(ut).format(this.dateFormat.convert(format));
         };
         /**
-         * Moment format for user - converts dotnet format to moment one
+         * Momentjs format for user - converts .NET format to momentjs one
+         *
+         * @method userMomentFormat
+         * @param {string} format - .NET date time format
+         * @returns {string} - Date time string format in momentjs format
          */
         DateConventer.prototype.userMomentFormat = function (format) {
             return this.dateFormat.convert(format);
@@ -64,8 +98,13 @@ var DateFormatter;
         return DateConventer;
     })();
     DateFormatter.DateConventer = DateConventer;
-    // get a list of all tokens on the source that exist on the target,
-    // ordered by reverse token length
+    /**
+     * Get a list of all tokens on the source that exist on the target,
+     * ordered by reverse token length
+     *
+     * @class DateFormat
+     * @property {string[]} placeholders - Array of string that are not a part of date, e.g. ' de ' in spanish date time format
+    */
     var DateFormat = (function () {
         function DateFormat() {
             this.placeholders = [];
@@ -150,6 +189,13 @@ var DateFormatter;
                 "timezone-3": "ZZZ"
             };
         }
+        /**
+         * Converts .NET format to momentjs format
+         *
+         * @method convert
+         * @param {string} format - .NET format
+         * @returns {string} - momentjs format
+        */
         DateFormat.prototype.convert = function (format) {
             var from = this.dotnet, to = this.moment;
             // create placeholders
@@ -166,7 +212,14 @@ var DateFormatter;
             }
             return format;
         };
-        // replace dotnet placeholder ' placeholder ' to moment placeholder [ placeholder ]
+        /**
+         * Replaces .NET placeholder ' placeholder ' to momentjs placeholder [ placeholder ]
+         *
+         * @method createPlaceholder
+         * @private
+         * @param {string} token - Token from .NET string format surrounded by commas, e.g. ' de '
+         * @returns {string} - Placeholder that cannot be determined as a part of the date time format
+        */
         DateFormat.prototype.createPlaceholder = function (token) {
             var ret = [];
             if (/'/.test(token)) {
@@ -180,6 +233,15 @@ var DateFormatter;
             }
             return token;
         };
+        /**
+         * Gets tokens to be repalces
+         *
+         * @method getSortedTokens
+         * @private
+         * @param {any} sourceDefinition - .NET array definitions
+         * @param {any} targetDefinition - momentjs array definitions
+         * @returns {IToken[]} - Array of tokens that is used for converting to momentjs format
+        */
         DateFormat.prototype.getSortedTokens = function (sourceDefinition, targetDefinition) {
             var tokens = [];
             var id = 0;

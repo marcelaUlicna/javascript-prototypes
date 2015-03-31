@@ -2,6 +2,10 @@
  * Created by MUlicna on 3/22/2015.
  */
 
+/// #source 1 1 /dateFormat.js
+/// external component to convert .net / momentjs datetime formats
+/// https://github.com/stevegreatrex/DateFormat
+
 ///<reference path="typing/jquery.d.ts" />
 ///<reference path="typing/moment.d.ts" />
 ///<reference path="typing/app.d.ts" />
@@ -9,6 +13,13 @@
 module DateFormatter {
     "use strict";
 
+
+    /**
+     * This is a main class of whole component. Initializes plugin with public methods.
+     *
+     * @class DateConventer
+     * @property {DateFormat} dateFormat - Momentjs and .NET formats
+     */
     export class DateConventer {
         dateFormat: DateFormat;
 
@@ -16,8 +27,13 @@ module DateFormatter {
             this.dateFormat = new DateFormat();
         }
 
-        /*
-        * Local user time from UTC
+        /**
+        * Converts UTC date time to local
+         *
+         * @method userTime
+         *
+         * @param {Date} date - Date object in UTC
+         * @returns {Date} - Date time in local timezone
         */
         userTime(date: Date): Date {
             // make sure that object User exists
@@ -33,8 +49,13 @@ module DateFormatter {
             }
         }
 
-        /*
-         * UTC time from local user time
+        /**
+         * Converts local date time to UTC
+         *
+         * @method utcFromUserTime
+         *
+         * @param {Date} date - Date object in local date time
+         * @returns {Date} - UTC date time
          */
         utcFromUserTime(date: Date): Date {
             var offsetMs = date.getTimezoneOffset() * 60000;
@@ -49,14 +70,25 @@ module DateFormatter {
         }
 
         /**
-         * Utc time in user format
+         * Gets string representation of date time based on user format
+         *
+         * @method utcUserFormat
+         * @param {Date} date - Date time object
+         * @param {string} format - User date time format
+         * @returns {string} - Date time in string format
          */
         utcUserFormat(date: Date, format: string): string {
             return moment(date).format(this.dateFormat.convert(format));
         }
 
         /**
-         * Locale time in user format
+         * Converts UTC to local date time and gets string format representation
+         * of local date time based on user format
+         *
+         * @method userTimeAndFormat
+         * @param {Date} date - Date time object in UTC
+         * @param {string} format - User date time format
+         * @returns {string} - Date time in string format
          */
         userTimeAndFormat(date: Date, format: string): string {
             var ut = this.userTime(date);
@@ -64,7 +96,11 @@ module DateFormatter {
         }
 
         /**
-         * Moment format for user - converts dotnet format to moment one
+         * Momentjs format for user - converts .NET format to momentjs one
+         *
+         * @method userMomentFormat
+         * @param {string} format - .NET date time format
+         * @returns {string} - Date time string format in momentjs format
          */
         userMomentFormat(format: string): string {
             return this.dateFormat.convert(format);
@@ -72,17 +108,39 @@ module DateFormatter {
     }
 
 
+    /**
+     * Token placeholder object for replacing the parts of format strings
+     * in .NET format to momentjs date time format
+     *
+     * @interface IToken
+     *
+     * @property {string} value
+     * @property {string} key
+     * @property {number} id
+    */
     export interface IToken {
         value: string;
         key: string;
         id: number;
     }
 
-    // get a list of all tokens on the source that exist on the target,
-    // ordered by reverse token length
+    /**
+     * Get a list of all tokens on the source that exist on the target,
+     * ordered by reverse token length
+     *
+     * @class DateFormat
+     * @property {string[]} placeholders - Array of string that are not a part of date, e.g. ' de ' in spanish date time format
+    */
     export class DateFormat {
         placeholders: string[] = [];
 
+        /**
+         * Converts .NET format to momentjs format
+         *
+         * @method convert
+         * @param {string} format - .NET format
+         * @returns {string} - momentjs format
+        */
         convert(format: string): string {
             var from = this.dotnet,
                 to = this.moment;
@@ -112,7 +170,14 @@ module DateFormatter {
             return format;
         }
 
-        // replace dotnet placeholder ' placeholder ' to moment placeholder [ placeholder ]
+        /**
+         * Replaces .NET placeholder ' placeholder ' to momentjs placeholder [ placeholder ]
+         *
+         * @method createPlaceholder
+         * @private
+         * @param {string} token - Token from .NET string format surrounded by commas, e.g. ' de '
+         * @returns {string} - Placeholder that cannot be determined as a part of the date time format
+        */
         private createPlaceholder(token: string): string {
             var ret: string[] = [];
 
@@ -131,6 +196,15 @@ module DateFormatter {
             return token;
         }
 
+        /**
+         * Gets tokens to be repalces
+         *
+         * @method getSortedTokens
+         * @private
+         * @param {any} sourceDefinition - .NET array definitions
+         * @param {any} targetDefinition - momentjs array definitions
+         * @returns {IToken[]} - Array of tokens that is used for converting to momentjs format
+        */
         private getSortedTokens(sourceDefinition: any, targetDefinition: any): IToken[]{
             var tokens: IToken[] = [];
             var id: number = 0;
