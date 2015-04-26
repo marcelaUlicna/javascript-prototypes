@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Date time format converter</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="bootstrap/css/font-awesome.css" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">   
+       <div class="navbar-collapse collapse prototypes-nav">
+            <ul class="nav navbar-nav">
+                <li><h2>Date time and format converter</h2></li>
+            </ul>
+            <div class="navbar-right navbar-buttons" style="margin-top: 20px;">
+                <a href="index.html" rel="tooltip" class="btn btn-default btn-sm prototypes-home-button" data-toggle="tooltip" data-placement="bottom" title="Home page"><i class="glyphicon glyphicon-home"></i></a>
+            </div>
+        </div>
+	   
+	   <div>
+		
+		<h4>Sample of some countries</h4>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Country</th>
+					<th>Culture</th>
+					<th width="120px">Time zone offset (in hours)</th>
+					<th>Local time</th>
+					<th>Local time format</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr id="en-US">
+					<td>English (United States)</td>
+					<td>en-US</td>
+					<td style="text-align: right;">-8</td>
+					<td class="localTime"></td>
+					<td class="localFormat"></td>
+				</tr>
+				<tr id="fr-CA">
+					<td>French (Canada)</td>
+					<td>fr-CA</td>
+					<td style="text-align: right;">-5</td>
+					<td class="localTime"></td>
+					<td class="localFormat"></td>
+				</tr>
+				<tr id="en-GB" class="active">
+					<td>English (United Kingdom)</td>
+					<td>en-GB</td>
+					<td style="text-align: right;">0</td>
+					<td class="localTime"></td>
+					<td class="localFormat"></td>
+				</tr>
+				<tr id="cs-CZ">
+					<td>Czech (Czech Republic)</td>
+					<td>cs-CZ</td>
+					<td style="text-align: right;">1</td>
+					<td class="localTime"></td>
+					<td class="localFormat"></td>
+				</tr>
+				<tr id="fr-FR">
+					<td>French (France)</td>
+					<td>fr-FR</td>
+					<td style="text-align: right;">1</td>
+					<td class="localTime"></td>
+					<td class="localFormat"></td>
+				</tr>
+				<tr id="es-ES">
+					<td>Spanish (Spain)</td>
+					<td>es-ES</td>
+					<td style="text-align: right;">1</td>
+					<td class="localTime"></td>
+					<td class="localFormat"></td>
+				</tr>
+				<tr id="ru-RU">
+					<td>Russian (Russia)</td>
+					<td>ru-RU</td>
+					<td style="text-align: right;">3</td>
+					<td class="localTime"></td>
+					<td class="localFormat"></td>
+				</tr>
+				<tr id="zh-CN">
+					<td>Chinese (Simplified, PRC)</td>
+					<td>zh-CN</td>
+					<td style="text-align: right;">8</td>
+					<td class="localTime"></td>
+					<td class="localFormat"></td>
+				</tr>
+				<tr id="ko-KR">
+					<td>Korean (Korea)</td>
+					<td>ko-KR</td>
+					<td style="text-align: right;">9</td>
+					<td class="localTime"></td>
+					<td class="localFormat"></td>
+				</tr>
+			</tbody>
+		</table>
+	   </div>
+    </div>
+
+	<script src="bootstrap/js/jquery-2.1.1.js"></script>
+	<script src="bootstrap/js/moment.js"></script>
+	<script src="bootstrap/js/moment-with-locales.js"></script>
+	<script src="assets/js/dateformat.js"></script>
+
+  <script type="text/javascript">
+      (function(){
+          User = { IsDaylight: false, Offset: 0 };
+		  
+		  var utcDateString = "2015-01-17 10:41:00.0000000 +00:00";
+		  var date = new Date(utcDateString);
+
+		  // en-US
+		  var enUs = $("table #en-US");
+		  User.Offset = -28800000;
+		  enUs.find(".localTime").text(formatConventer.userTimeAndFormat(date, "MMMM d yyyy HH:mm:ss"));
+		  enUs.find(".localFormat").text(formatConventer.userTimeAndFormat(date, "dddd, MMMM d, yyyy h:mm:ss tt"));
+		  
+		  // fr-CA
+		  var frCa = $("table #fr-CA");
+		  User.Offset = -18000000;
+		  frCa.find(".localTime").text(formatConventer.userTimeAndFormat(date, "MMMM d yyyy HH:mm:ss"));
+		  frCa.find(".localFormat").text(formatConventer.userTimeAndFormat(date, "d MMMM yyyy HH:mm:ss", "fr-CA"));
+		  
+		  // en-GB
+		  var enGb = $("table #en-GB");
+		  User.Offset = 0;
+		  enGb.find(".localTime").text(formatConventer.userTimeAndFormat(date, "MMMM d yyyy HH:mm:ss"));
+		  enGb.find(".localFormat").text(formatConventer.userTimeAndFormat(date, "dd MMMM yyyy HH:mm:ss", "en-GB"));
+		  
+		  // cs-CZ
+		  var csCz = $("table #cs-CZ");
+		  User.Offset = 3600000;
+		  csCz.find(".localTime").text(formatConventer.userTimeAndFormat(date, "MMMM d yyyy HH:mm:ss"));
+		  csCz.find(".localFormat").text(formatConventer.userTimeAndFormat(date, "d. MMMM yyyy H:mm:ss", "cs-CZ"));
+		  
+		  // fr-FR
+		  var frFr = $("table #fr-FR");
+		  User.Offset = 3600000;
+		  frFr.find(".localTime").text(formatConventer.userTimeAndFormat(date, "MMMM d yyyy HH:mm:ss"));
+		  frFr.find(".localFormat").text(formatConventer.userTimeAndFormat(date, "dddd d MMMM yyyy HH:mm:ss", "fr-FR"));
+		  
+		  // es-ES
+		  var esEs = $("table #es-ES");
+		  User.Offset = 3600000;
+		  esEs.find(".localTime").text(formatConventer.userTimeAndFormat(date, "MMMM d yyyy HH:mm:ss"));
+		  esEs.find(".localFormat").text(formatConventer.userTimeAndFormat(date, "dddd, d' de 'MMMM' de 'yyyy H:mm:ss", "es-ES"));
+		  
+		  // ru-RU
+		  var ruRu = $("table #ru-RU");
+		  User.Offset = 10800000;
+		  ruRu.find(".localTime").text(formatConventer.userTimeAndFormat(date, "MMMM d yyyy HH:mm:ss"));
+		  ruRu.find(".localFormat").text(formatConventer.userTimeAndFormat(date, "d MMMM yyyy 'г.' H:mm:ss", "ru-RU"));
+		  
+		  // zh-CN
+		  var zhCn = $("table #zh-CN");
+		  User.Offset = 28800000;
+		  zhCn.find(".localTime").text(formatConventer.userTimeAndFormat(date, "MMMM d yyyy HH:mm:ss"));
+		  zhCn.find(".localFormat").text(formatConventer.userTimeAndFormat(date, "yyyy'年'M'月'd'日' H:mm:ss", "zh-CN"));
+		  
+		  // ko-KR
+		  var koKr = $("table #ko-KR");
+		  User.Offset = 32400000;
+		  koKr.find(".localTime").text(formatConventer.userTimeAndFormat(date, "MMMM d yyyy HH:mm:ss"));
+		  koKr.find(".localFormat").text(formatConventer.userTimeAndFormat(date, "yyyy'년' M'월' d'일' dddd tt h:mm:ss", "ko-KR"));
+      })();
+  </script>
+</body>
+</html>
