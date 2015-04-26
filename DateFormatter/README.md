@@ -3,6 +3,7 @@
 The main reason for writing date converter plugin is that client side components often use momentjs library for manipulating with dates. Unfortunately, C# string representation of date based on user culture is not compatible with momentjs formats that javascript componets such as bootstrap datepicker utilize. This plugin provides two basic functionality:
 * converts dotnet date/time formats to momentjs ones
 * converts local time to utc and vise versa
+* additionaly provides localization of date/time based on momentjs library
 
 ### Object User
 For the correct functionality of plugin it is necessary to create global object `User` with following properties:
