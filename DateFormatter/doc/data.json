@@ -85,48 +85,24 @@
             "fors": {},
             "namespaces": {}
         },
-        "dist\\dateformat.js": {
-            "name": "dist\\dateformat.js",
+        "js\\jquery-2.1.1.js": {
+            "name": "js\\jquery-2.1.1.js",
             "modules": {},
             "classes": {},
             "fors": {},
             "namespaces": {}
         },
-        "lib\\js\\jquery-2.1.1.js": {
-            "name": "lib\\js\\jquery-2.1.1.js",
+        "js\\moment-with-locales.js": {
+            "name": "js\\moment-with-locales.js",
             "modules": {},
             "classes": {},
             "fors": {},
             "namespaces": {}
         },
-        "lib\\js\\moment-with-locales.js": {
-            "name": "lib\\js\\moment-with-locales.js",
+        "js\\moment.js": {
+            "name": "js\\moment.js",
             "modules": {},
             "classes": {},
-            "fors": {},
-            "namespaces": {}
-        },
-        "lib\\js\\moment.js": {
-            "name": "lib\\js\\moment.js",
-            "modules": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {}
-        },
-        "src\\app.js": {
-            "name": "src\\app.js",
-            "modules": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {}
-        },
-        "src\\dateformat.js": {
-            "name": "src\\dateformat.js",
-            "modules": {},
-            "classes": {
-                "DateConventer": 1,
-                "DateFormat": 1
-            },
             "fors": {},
             "namespaces": {}
         },
@@ -140,7 +116,10 @@
         "dateformat.js": {
             "name": "dateformat.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "DateConventer": 1,
+                "DateFormat": 1
+            },
             "fors": {},
             "namespaces": {}
         }
@@ -155,7 +134,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "file": "src\\dateformat.js",
+            "file": "dateformat.js",
             "line": 13,
             "description": "This is a main class of whole component. Initializes plugin with public methods.",
             "itemtype": "property",
@@ -169,8 +148,8 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "file": "src\\dateformat.js",
-            "line": 101,
+            "file": "dateformat.js",
+            "line": 110,
             "description": "Get a list of all tokens on the source that exist on the target,\nordered by reverse token length",
             "itemtype": "property",
             "type": "String[]"
@@ -965,31 +944,7 @@
             "class": "DateConventer"
         },
         {
-            "file": "dist\\dateformat.js",
-            "line": 1,
-            "description": "Created by MUlicna on 3/22/2015.",
-            "class": "DateConventer"
-        },
-        {
-            "file": "dist\\dateformat.js",
-            "line": 45,
-            "description": "Utc time in user format",
-            "class": "DateConventer"
-        },
-        {
-            "file": "dist\\dateformat.js",
-            "line": 51,
-            "description": "Locale time in user format",
-            "class": "DateConventer"
-        },
-        {
-            "file": "dist\\dateformat.js",
-            "line": 58,
-            "description": "Moment format for user - converts dotnet format to moment one",
-            "class": "DateConventer"
-        },
-        {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 846,
             "description": "Create key-value caches of limited size",
             "return": {
@@ -999,7 +954,7 @@
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 866,
             "description": "Mark a function for special use by Sizzle",
             "params": [
@@ -1012,7 +967,7 @@
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 875,
             "description": "Support testing using an element",
             "params": [
@@ -1025,7 +980,7 @@
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 896,
             "description": "Adds the same handler for all of the specified attrs",
             "params": [
@@ -1043,7 +998,7 @@
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 910,
             "description": "Checks document order of two siblings",
             "params": [
@@ -1065,7 +1020,7 @@
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 939,
             "description": "Returns a function to use in pseudos for input types",
             "params": [
@@ -1078,7 +1033,7 @@
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 950,
             "description": "Returns a function to use in pseudos for buttons",
             "params": [
@@ -1091,7 +1046,7 @@
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 961,
             "description": "Returns a function to use in pseudos for positionals",
             "params": [
@@ -1104,7 +1059,7 @@
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 983,
             "description": "Checks a node for validity as a Sizzle context",
             "params": [
@@ -1121,7 +1076,7 @@
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 995,
             "description": "Detects XML nodes",
             "params": [
@@ -1138,7 +1093,7 @@
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 1007,
             "description": "Sets document-related variables once based on the current document",
             "params": [
@@ -1156,7 +1111,7 @@
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 1440,
             "description": "Document sorting and removing duplicates",
             "params": [
@@ -1169,7 +1124,7 @@
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 1473,
             "description": "Utility function for retrieving the text value of an array of DOM nodes",
             "params": [
@@ -1182,7 +1137,7 @@
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 2440,
             "description": "A low-level selection function that works with Sizzle's compiled\n selector functions",
             "params": [
@@ -1212,19 +1167,19 @@
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 3401,
             "description": "The ready event handler and self cleanup method",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 3494,
             "description": "Determines whether an object can have data",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 5454,
             "description": "Retrieve the actual display of a element",
             "params": [
@@ -1242,7 +1197,7 @@
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 5478,
             "description": "Try to determine the default display value of an element",
             "params": [
@@ -1255,91 +1210,91 @@
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 8823,
             "description": "Load a url into a page",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\jquery-2.1.1.js",
+            "file": "js\\jquery-2.1.1.js",
             "line": 8897,
             "description": "Gets a window from an element",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment-with-locales.js",
+            "file": "js\\moment-with-locales.js",
             "line": 8,
             "description": "Constants",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment-with-locales.js",
+            "file": "js\\moment-with-locales.js",
             "line": 360,
             "description": "Constructors",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment-with-locales.js",
+            "file": "js\\moment-with-locales.js",
             "line": 412,
             "description": "Helpers",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment-with-locales.js",
+            "file": "js\\moment-with-locales.js",
             "line": 779,
             "description": "Locale",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment-with-locales.js",
+            "file": "js\\moment-with-locales.js",
             "line": 967,
             "description": "Formatting",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment-with-locales.js",
+            "file": "js\\moment-with-locales.js",
             "line": 1032,
             "description": "Parsing",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment-with-locales.js",
+            "file": "js\\moment-with-locales.js",
             "line": 1613,
             "description": "Relative Time",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment-with-locales.js",
+            "file": "js\\moment-with-locales.js",
             "line": 1650,
             "description": "Week of Year",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment-with-locales.js",
+            "file": "js\\moment-with-locales.js",
             "line": 1698,
             "description": "Top Level Functions",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment-with-locales.js",
+            "file": "js\\moment-with-locales.js",
             "line": 2042,
             "description": "Moment Prototype",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment-with-locales.js",
+            "file": "js\\moment-with-locales.js",
             "line": 2527,
             "description": "Duration Prototype",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment-with-locales.js",
+            "file": "js\\moment-with-locales.js",
             "line": 2752,
             "description": "Default Locale",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment-with-locales.js",
+            "file": "js\\moment-with-locales.js",
             "line": 6266,
             "description": "Returns true if the word before the given number loses the \"-n\" ending.\ne.g. \"an 10 Deeg\" but \"a 5 Deeg\"",
             "params": [
@@ -1356,127 +1311,127 @@
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment-with-locales.js",
+            "file": "js\\moment-with-locales.js",
             "line": 9035,
             "description": "Exposing Moment",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment.js",
+            "file": "js\\moment.js",
             "line": 8,
             "description": "Constants",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment.js",
+            "file": "js\\moment.js",
             "line": 360,
             "description": "Constructors",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment.js",
+            "file": "js\\moment.js",
             "line": 412,
             "description": "Helpers",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment.js",
+            "file": "js\\moment.js",
             "line": 779,
             "description": "Locale",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment.js",
+            "file": "js\\moment.js",
             "line": 967,
             "description": "Formatting",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment.js",
+            "file": "js\\moment.js",
             "line": 1032,
             "description": "Parsing",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment.js",
+            "file": "js\\moment.js",
             "line": 1613,
             "description": "Relative Time",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment.js",
+            "file": "js\\moment.js",
             "line": 1650,
             "description": "Week of Year",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment.js",
+            "file": "js\\moment.js",
             "line": 1698,
             "description": "Top Level Functions",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment.js",
+            "file": "js\\moment.js",
             "line": 2042,
             "description": "Moment Prototype",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment.js",
+            "file": "js\\moment.js",
             "line": 2527,
             "description": "Duration Prototype",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment.js",
+            "file": "js\\moment.js",
             "line": 2752,
             "description": "Default Locale",
             "class": "DateConventer"
         },
         {
-            "file": "lib\\js\\moment.js",
+            "file": "js\\moment.js",
             "line": 2771,
             "description": "Exposing Moment",
             "class": "DateConventer"
         },
         {
-            "file": "src\\app.js",
+            "file": "app.js",
             "line": 143,
             "description": "=========================================================\n0 => 0 Timezone: \"UTC\"\n3600000 => +1 Timezone: \"Central Europe Standard Time\"\n10800000 => +3 Timezone: \"Russian Standard Time\"\n21600000 => +6 Timezone: \"Bangladesh Standard Time\"\n-21600000 => -6 Timezone: \"Central America Standard Time\"\n-28800000 => -8 Timezone: \"Pacific Standard Time\"",
             "class": "DateConventer"
         },
         {
-            "file": "src\\app.js",
+            "file": "app.js",
             "line": 153,
             "description": "====================================================\nCulture: \"en-US\"\nFullLongFormat: \"dddd, MMMM d, yyyy h:mm:ss tt\"\nFullShortFormat: \"M/d/yyyy h:mm tt\"\nLongDate: \"dddd, MMMM d, yyyy\"\nLongTime: \"h:mm:ss tt\"\nShortDate: \"M/d/yyyy\"\nShortTime: \"h:mm tt\"",
             "class": "DateConventer"
         },
         {
-            "file": "src\\app.js",
+            "file": "app.js",
             "line": 164,
             "description": "====================================================\nCulture: \"fr-FR\"\nFullLongFormat: \"dddd d MMMM yyyy HH:mm:ss\"\nFullShortFormat: \"dd/MM/yyyy HH:mm\"\nLongDate: \"dddd d MMMM yyyy\"\nLongTime: \"HH:mm:ss\"\nShortDate: \"dd/MM/yyyy\"\nShortTime: \"HH:mm\"",
             "class": "DateConventer"
         },
         {
-            "file": "src\\app.js",
+            "file": "app.js",
             "line": 175,
             "description": "====================================================\nCulture: \"es-ES\"\nFullLongFormat: \"dddd, d' de 'MMMM' de 'yyyy H:mm:ss\"\nFullShortFormat: \"dd/MM/yyyy H:mm\"\nLongDate: \"dddd, d' de 'MMMM' de 'yyyy\"\nLongTime: \"H:mm:ss\"\nShortDate: \"dd/MM/yyyy\"\nShortTime: \"H:mm\"",
             "class": "DateConventer"
         },
         {
-            "file": "src\\app.js",
+            "file": "app.js",
             "line": 186,
             "description": "====================================================\nCulture: \"zh\"\nFullLongFormat: \"yyyy'年'M'月'd'日' H:mm:ss\"\nFullShortFormat: \"yyyy/M/d H:mm\"\nLongDate: \"yyyy'年'M'月'd'日'\"\nLongTime: \"H:mm:ss\"\nShortDate: \"yyyy/M/d\"\nShortTime: \"H:mm\"",
             "class": "DateConventer"
         },
         {
-            "file": "src\\dateformat.js",
+            "file": "dateformat.js",
             "line": 1,
             "description": "Created by MUlicna on 3/22/2015.",
             "class": "DateConventer"
         },
         {
-            "file": "src\\dateformat.js",
+            "file": "dateformat.js",
             "line": 23,
             "description": "Converts UTC date time to local",
             "itemtype": "method",
@@ -1495,7 +1450,7 @@
             "class": "DateConventer"
         },
         {
-            "file": "src\\dateformat.js",
+            "file": "dateformat.js",
             "line": 44,
             "description": "Converts local date time to UTC",
             "itemtype": "method",
@@ -1514,7 +1469,7 @@
             "class": "DateConventer"
         },
         {
-            "file": "src\\dateformat.js",
+            "file": "dateformat.js",
             "line": 64,
             "description": "Gets string representation of date time based on user format",
             "itemtype": "method",
@@ -1529,6 +1484,12 @@
                     "name": "format",
                     "description": "- User date time format",
                     "type": "String"
+                },
+                {
+                    "name": "local",
+                    "description": "- Local code to localize days and months",
+                    "type": "String",
+                    "optional": true
                 }
             ],
             "return": {
@@ -1538,8 +1499,8 @@
             "class": "DateConventer"
         },
         {
-            "file": "src\\dateformat.js",
-            "line": 75,
+            "file": "dateformat.js",
+            "line": 80,
             "description": "Converts UTC to local date time and gets string format representation\nof local date time based on user format",
             "itemtype": "method",
             "name": "userTimeAndFormat",
@@ -1553,6 +1514,12 @@
                     "name": "format",
                     "description": "- User date time format",
                     "type": "String"
+                },
+                {
+                    "name": "local",
+                    "description": "- Local code to localize days and months",
+                    "type": "String",
+                    "optional": true
                 }
             ],
             "return": {
@@ -1562,8 +1529,8 @@
             "class": "DateConventer"
         },
         {
-            "file": "src\\dateformat.js",
-            "line": 88,
+            "file": "dateformat.js",
+            "line": 97,
             "description": "Momentjs format for user - converts .NET format to momentjs one",
             "itemtype": "method",
             "name": "userMomentFormat",
@@ -1581,8 +1548,8 @@
             "class": "DateConventer"
         },
         {
-            "file": "src\\dateformat.js",
-            "line": 192,
+            "file": "dateformat.js",
+            "line": 201,
             "description": "Converts .NET format to momentjs format",
             "itemtype": "method",
             "name": "convert",
@@ -1600,8 +1567,8 @@
             "class": "DateFormat"
         },
         {
-            "file": "src\\dateformat.js",
-            "line": 215,
+            "file": "dateformat.js",
+            "line": 224,
             "description": "Replaces .NET placeholder ' placeholder ' to momentjs placeholder [ placeholder ]",
             "itemtype": "method",
             "name": "createPlaceholder",
@@ -1621,8 +1588,8 @@
             "class": "DateFormat"
         },
         {
-            "file": "src\\dateformat.js",
-            "line": 236,
+            "file": "dateformat.js",
+            "line": 245,
             "description": "Gets tokens to be repalces",
             "itemtype": "method",
             "name": "getSortedTokens",
@@ -1645,60 +1612,6 @@
                 "type": "IToken[]"
             },
             "class": "DateFormat"
-        },
-        {
-            "file": "app.js",
-            "line": 143,
-            "description": "=========================================================\n0 => 0 Timezone: \"UTC\"\n3600000 => +1 Timezone: \"Central Europe Standard Time\"\n10800000 => +3 Timezone: \"Russian Standard Time\"\n21600000 => +6 Timezone: \"Bangladesh Standard Time\"\n-21600000 => -6 Timezone: \"Central America Standard Time\"\n-28800000 => -8 Timezone: \"Pacific Standard Time\"",
-            "class": ""
-        },
-        {
-            "file": "app.js",
-            "line": 153,
-            "description": "====================================================\nCulture: \"en-US\"\nFullLongFormat: \"dddd, MMMM d, yyyy h:mm:ss tt\"\nFullShortFormat: \"M/d/yyyy h:mm tt\"\nLongDate: \"dddd, MMMM d, yyyy\"\nLongTime: \"h:mm:ss tt\"\nShortDate: \"M/d/yyyy\"\nShortTime: \"h:mm tt\"",
-            "class": ""
-        },
-        {
-            "file": "app.js",
-            "line": 164,
-            "description": "====================================================\nCulture: \"fr-FR\"\nFullLongFormat: \"dddd d MMMM yyyy HH:mm:ss\"\nFullShortFormat: \"dd/MM/yyyy HH:mm\"\nLongDate: \"dddd d MMMM yyyy\"\nLongTime: \"HH:mm:ss\"\nShortDate: \"dd/MM/yyyy\"\nShortTime: \"HH:mm\"",
-            "class": ""
-        },
-        {
-            "file": "app.js",
-            "line": 175,
-            "description": "====================================================\nCulture: \"es-ES\"\nFullLongFormat: \"dddd, d' de 'MMMM' de 'yyyy H:mm:ss\"\nFullShortFormat: \"dd/MM/yyyy H:mm\"\nLongDate: \"dddd, d' de 'MMMM' de 'yyyy\"\nLongTime: \"H:mm:ss\"\nShortDate: \"dd/MM/yyyy\"\nShortTime: \"H:mm\"",
-            "class": ""
-        },
-        {
-            "file": "app.js",
-            "line": 186,
-            "description": "====================================================\nCulture: \"zh\"\nFullLongFormat: \"yyyy'年'M'月'd'日' H:mm:ss\"\nFullShortFormat: \"yyyy/M/d H:mm\"\nLongDate: \"yyyy'年'M'月'd'日'\"\nLongTime: \"H:mm:ss\"\nShortDate: \"yyyy/M/d\"\nShortTime: \"H:mm\"",
-            "class": ""
-        },
-        {
-            "file": "dateformat.js",
-            "line": 1,
-            "description": "Created by MUlicna on 3/22/2015.",
-            "class": ""
-        },
-        {
-            "file": "dateformat.js",
-            "line": 45,
-            "description": "Utc time in user format",
-            "class": ""
-        },
-        {
-            "file": "dateformat.js",
-            "line": 51,
-            "description": "Locale time in user format",
-            "class": ""
-        },
-        {
-            "file": "dateformat.js",
-            "line": 58,
-            "description": "Moment format for user - converts dotnet format to moment one",
-            "class": ""
         }
     ],
     "warnings": [
@@ -1756,59 +1669,59 @@
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " lib\\js\\jquery-2.1.1.js:846"
+            "line": " js\\jquery-2.1.1.js:846"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " lib\\js\\jquery-2.1.1.js:910"
+            "line": " js\\jquery-2.1.1.js:910"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " lib\\js\\jquery-2.1.1.js:983"
+            "line": " js\\jquery-2.1.1.js:983"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " lib\\js\\jquery-2.1.1.js:995"
+            "line": " js\\jquery-2.1.1.js:995"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " lib\\js\\jquery-2.1.1.js:1007"
+            "line": " js\\jquery-2.1.1.js:1007"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " lib\\js\\moment-with-locales.js:6266"
+            "line": " js\\moment-with-locales.js:6266"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src\\dateformat.js:23"
+            "line": " dateformat.js:23"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src\\dateformat.js:44"
+            "line": " dateformat.js:44"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src\\dateformat.js:64"
+            "line": " dateformat.js:64"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src\\dateformat.js:75"
+            "line": " dateformat.js:80"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src\\dateformat.js:88"
+            "line": " dateformat.js:97"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src\\dateformat.js:192"
+            "line": " dateformat.js:201"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src\\dateformat.js:215"
+            "line": " dateformat.js:224"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src\\dateformat.js:236"
+            "line": " dateformat.js:245"
         },
         {
             "message": "Missing item type\nPrivate functions",
@@ -2103,232 +2016,192 @@
             "line": " bower_components\\moment\\moment.js:3006"
         },
         {
-            "message": "Missing item type\nCreated by MUlicna on 3/22/2015.",
-            "line": " dist\\dateformat.js:1"
-        },
-        {
-            "message": "Missing item type\nUtc time in user format",
-            "line": " dist\\dateformat.js:45"
-        },
-        {
-            "message": "Missing item type\nLocale time in user format",
-            "line": " dist\\dateformat.js:51"
-        },
-        {
-            "message": "Missing item type\nMoment format for user - converts dotnet format to moment one",
-            "line": " dist\\dateformat.js:58"
-        },
-        {
             "message": "Missing item type\nCreate key-value caches of limited size",
-            "line": " lib\\js\\jquery-2.1.1.js:846"
+            "line": " js\\jquery-2.1.1.js:846"
         },
         {
             "message": "Missing item type\nMark a function for special use by Sizzle",
-            "line": " lib\\js\\jquery-2.1.1.js:866"
+            "line": " js\\jquery-2.1.1.js:866"
         },
         {
             "message": "Missing item type\nSupport testing using an element",
-            "line": " lib\\js\\jquery-2.1.1.js:875"
+            "line": " js\\jquery-2.1.1.js:875"
         },
         {
             "message": "Missing item type\nAdds the same handler for all of the specified attrs",
-            "line": " lib\\js\\jquery-2.1.1.js:896"
+            "line": " js\\jquery-2.1.1.js:896"
         },
         {
             "message": "Missing item type\nChecks document order of two siblings",
-            "line": " lib\\js\\jquery-2.1.1.js:910"
+            "line": " js\\jquery-2.1.1.js:910"
         },
         {
             "message": "Missing item type\nReturns a function to use in pseudos for input types",
-            "line": " lib\\js\\jquery-2.1.1.js:939"
+            "line": " js\\jquery-2.1.1.js:939"
         },
         {
             "message": "Missing item type\nReturns a function to use in pseudos for buttons",
-            "line": " lib\\js\\jquery-2.1.1.js:950"
+            "line": " js\\jquery-2.1.1.js:950"
         },
         {
             "message": "Missing item type\nReturns a function to use in pseudos for positionals",
-            "line": " lib\\js\\jquery-2.1.1.js:961"
+            "line": " js\\jquery-2.1.1.js:961"
         },
         {
             "message": "Missing item type\nChecks a node for validity as a Sizzle context",
-            "line": " lib\\js\\jquery-2.1.1.js:983"
+            "line": " js\\jquery-2.1.1.js:983"
         },
         {
             "message": "Missing item type\nDetects XML nodes",
-            "line": " lib\\js\\jquery-2.1.1.js:995"
+            "line": " js\\jquery-2.1.1.js:995"
         },
         {
             "message": "Missing item type\nSets document-related variables once based on the current document",
-            "line": " lib\\js\\jquery-2.1.1.js:1007"
+            "line": " js\\jquery-2.1.1.js:1007"
         },
         {
             "message": "Missing item type\nDocument sorting and removing duplicates",
-            "line": " lib\\js\\jquery-2.1.1.js:1440"
+            "line": " js\\jquery-2.1.1.js:1440"
         },
         {
             "message": "Missing item type\nUtility function for retrieving the text value of an array of DOM nodes",
-            "line": " lib\\js\\jquery-2.1.1.js:1473"
+            "line": " js\\jquery-2.1.1.js:1473"
         },
         {
             "message": "Missing item type\nA low-level selection function that works with Sizzle's compiled\n selector functions",
-            "line": " lib\\js\\jquery-2.1.1.js:2440"
+            "line": " js\\jquery-2.1.1.js:2440"
         },
         {
             "message": "Missing item type\nThe ready event handler and self cleanup method",
-            "line": " lib\\js\\jquery-2.1.1.js:3401"
+            "line": " js\\jquery-2.1.1.js:3401"
         },
         {
             "message": "Missing item type\nDetermines whether an object can have data",
-            "line": " lib\\js\\jquery-2.1.1.js:3494"
+            "line": " js\\jquery-2.1.1.js:3494"
         },
         {
             "message": "Missing item type\nRetrieve the actual display of a element",
-            "line": " lib\\js\\jquery-2.1.1.js:5454"
+            "line": " js\\jquery-2.1.1.js:5454"
         },
         {
             "message": "Missing item type\nTry to determine the default display value of an element",
-            "line": " lib\\js\\jquery-2.1.1.js:5478"
+            "line": " js\\jquery-2.1.1.js:5478"
         },
         {
             "message": "Missing item type\nLoad a url into a page",
-            "line": " lib\\js\\jquery-2.1.1.js:8823"
+            "line": " js\\jquery-2.1.1.js:8823"
         },
         {
             "message": "Missing item type\nGets a window from an element",
-            "line": " lib\\js\\jquery-2.1.1.js:8897"
+            "line": " js\\jquery-2.1.1.js:8897"
         },
         {
             "message": "Missing item type\nConstants",
-            "line": " lib\\js\\moment-with-locales.js:8"
+            "line": " js\\moment-with-locales.js:8"
         },
         {
             "message": "Missing item type\nConstructors",
-            "line": " lib\\js\\moment-with-locales.js:360"
+            "line": " js\\moment-with-locales.js:360"
         },
         {
             "message": "Missing item type\nHelpers",
-            "line": " lib\\js\\moment-with-locales.js:412"
+            "line": " js\\moment-with-locales.js:412"
         },
         {
             "message": "Missing item type\nLocale",
-            "line": " lib\\js\\moment-with-locales.js:779"
+            "line": " js\\moment-with-locales.js:779"
         },
         {
             "message": "Missing item type\nFormatting",
-            "line": " lib\\js\\moment-with-locales.js:967"
+            "line": " js\\moment-with-locales.js:967"
         },
         {
             "message": "Missing item type\nParsing",
-            "line": " lib\\js\\moment-with-locales.js:1032"
+            "line": " js\\moment-with-locales.js:1032"
         },
         {
             "message": "Missing item type\nRelative Time",
-            "line": " lib\\js\\moment-with-locales.js:1613"
+            "line": " js\\moment-with-locales.js:1613"
         },
         {
             "message": "Missing item type\nWeek of Year",
-            "line": " lib\\js\\moment-with-locales.js:1650"
+            "line": " js\\moment-with-locales.js:1650"
         },
         {
             "message": "Missing item type\nTop Level Functions",
-            "line": " lib\\js\\moment-with-locales.js:1698"
+            "line": " js\\moment-with-locales.js:1698"
         },
         {
             "message": "Missing item type\nMoment Prototype",
-            "line": " lib\\js\\moment-with-locales.js:2042"
+            "line": " js\\moment-with-locales.js:2042"
         },
         {
             "message": "Missing item type\nDuration Prototype",
-            "line": " lib\\js\\moment-with-locales.js:2527"
+            "line": " js\\moment-with-locales.js:2527"
         },
         {
             "message": "Missing item type\nDefault Locale",
-            "line": " lib\\js\\moment-with-locales.js:2752"
+            "line": " js\\moment-with-locales.js:2752"
         },
         {
             "message": "Missing item type\nReturns true if the word before the given number loses the \"-n\" ending.\ne.g. \"an 10 Deeg\" but \"a 5 Deeg\"",
-            "line": " lib\\js\\moment-with-locales.js:6266"
+            "line": " js\\moment-with-locales.js:6266"
         },
         {
             "message": "Missing item type\nExposing Moment",
-            "line": " lib\\js\\moment-with-locales.js:9035"
+            "line": " js\\moment-with-locales.js:9035"
         },
         {
             "message": "Missing item type\nConstants",
-            "line": " lib\\js\\moment.js:8"
+            "line": " js\\moment.js:8"
         },
         {
             "message": "Missing item type\nConstructors",
-            "line": " lib\\js\\moment.js:360"
+            "line": " js\\moment.js:360"
         },
         {
             "message": "Missing item type\nHelpers",
-            "line": " lib\\js\\moment.js:412"
+            "line": " js\\moment.js:412"
         },
         {
             "message": "Missing item type\nLocale",
-            "line": " lib\\js\\moment.js:779"
+            "line": " js\\moment.js:779"
         },
         {
             "message": "Missing item type\nFormatting",
-            "line": " lib\\js\\moment.js:967"
+            "line": " js\\moment.js:967"
         },
         {
             "message": "Missing item type\nParsing",
-            "line": " lib\\js\\moment.js:1032"
+            "line": " js\\moment.js:1032"
         },
         {
             "message": "Missing item type\nRelative Time",
-            "line": " lib\\js\\moment.js:1613"
+            "line": " js\\moment.js:1613"
         },
         {
             "message": "Missing item type\nWeek of Year",
-            "line": " lib\\js\\moment.js:1650"
+            "line": " js\\moment.js:1650"
         },
         {
             "message": "Missing item type\nTop Level Functions",
-            "line": " lib\\js\\moment.js:1698"
+            "line": " js\\moment.js:1698"
         },
         {
             "message": "Missing item type\nMoment Prototype",
-            "line": " lib\\js\\moment.js:2042"
+            "line": " js\\moment.js:2042"
         },
         {
             "message": "Missing item type\nDuration Prototype",
-            "line": " lib\\js\\moment.js:2527"
+            "line": " js\\moment.js:2527"
         },
         {
             "message": "Missing item type\nDefault Locale",
-            "line": " lib\\js\\moment.js:2752"
+            "line": " js\\moment.js:2752"
         },
         {
             "message": "Missing item type\nExposing Moment",
-            "line": " lib\\js\\moment.js:2771"
-        },
-        {
-            "message": "Missing item type\n=========================================================\n0 => 0 Timezone: \"UTC\"\n3600000 => +1 Timezone: \"Central Europe Standard Time\"\n10800000 => +3 Timezone: \"Russian Standard Time\"\n21600000 => +6 Timezone: \"Bangladesh Standard Time\"\n-21600000 => -6 Timezone: \"Central America Standard Time\"\n-28800000 => -8 Timezone: \"Pacific Standard Time\"",
-            "line": " src\\app.js:143"
-        },
-        {
-            "message": "Missing item type\n====================================================\nCulture: \"en-US\"\nFullLongFormat: \"dddd, MMMM d, yyyy h:mm:ss tt\"\nFullShortFormat: \"M/d/yyyy h:mm tt\"\nLongDate: \"dddd, MMMM d, yyyy\"\nLongTime: \"h:mm:ss tt\"\nShortDate: \"M/d/yyyy\"\nShortTime: \"h:mm tt\"",
-            "line": " src\\app.js:153"
-        },
-        {
-            "message": "Missing item type\n====================================================\nCulture: \"fr-FR\"\nFullLongFormat: \"dddd d MMMM yyyy HH:mm:ss\"\nFullShortFormat: \"dd/MM/yyyy HH:mm\"\nLongDate: \"dddd d MMMM yyyy\"\nLongTime: \"HH:mm:ss\"\nShortDate: \"dd/MM/yyyy\"\nShortTime: \"HH:mm\"",
-            "line": " src\\app.js:164"
-        },
-        {
-            "message": "Missing item type\n====================================================\nCulture: \"es-ES\"\nFullLongFormat: \"dddd, d' de 'MMMM' de 'yyyy H:mm:ss\"\nFullShortFormat: \"dd/MM/yyyy H:mm\"\nLongDate: \"dddd, d' de 'MMMM' de 'yyyy\"\nLongTime: \"H:mm:ss\"\nShortDate: \"dd/MM/yyyy\"\nShortTime: \"H:mm\"",
-            "line": " src\\app.js:175"
-        },
-        {
-            "message": "Missing item type\n====================================================\nCulture: \"zh\"\nFullLongFormat: \"yyyy'年'M'月'd'日' H:mm:ss\"\nFullShortFormat: \"yyyy/M/d H:mm\"\nLongDate: \"yyyy'年'M'月'd'日'\"\nLongTime: \"H:mm:ss\"\nShortDate: \"yyyy/M/d\"\nShortTime: \"H:mm\"",
-            "line": " src\\app.js:186"
-        },
-        {
-            "message": "Missing item type\nCreated by MUlicna on 3/22/2015.",
-            "line": " src\\dateformat.js:1"
+            "line": " js\\moment.js:2771"
         },
         {
             "message": "Missing item type\n=========================================================\n0 => 0 Timezone: \"UTC\"\n3600000 => +1 Timezone: \"Central Europe Standard Time\"\n10800000 => +3 Timezone: \"Russian Standard Time\"\n21600000 => +6 Timezone: \"Bangladesh Standard Time\"\n-21600000 => -6 Timezone: \"Central America Standard Time\"\n-28800000 => -8 Timezone: \"Pacific Standard Time\"",
@@ -2353,18 +2226,6 @@
         {
             "message": "Missing item type\nCreated by MUlicna on 3/22/2015.",
             "line": " dateformat.js:1"
-        },
-        {
-            "message": "Missing item type\nUtc time in user format",
-            "line": " dateformat.js:45"
-        },
-        {
-            "message": "Missing item type\nLocale time in user format",
-            "line": " dateformat.js:51"
-        },
-        {
-            "message": "Missing item type\nMoment format for user - converts dotnet format to moment one",
-            "line": " dateformat.js:58"
         }
     ]
 }

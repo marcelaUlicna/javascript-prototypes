@@ -67,10 +67,15 @@ var DateFormatter;
          * @method utcUserFormat
          * @param {Date} date - Date time object
          * @param {string} format - User date time format
+         * @param {string} [local] - Local code to localize days and months
          * @returns {string} - Date time in string format
          */
-        DateConventer.prototype.utcUserFormat = function (date, format) {
-            return moment(date).format(this.dateFormat.convert(format));
+        DateConventer.prototype.utcUserFormat = function (date, format, local) {
+            var actualDate = moment(date);
+            if (local && local.length) {
+                actualDate.locale(local);
+            }
+            return actualDate.format(this.dateFormat.convert(format));
         };
         /**
          * Converts UTC to local date time and gets string format representation
@@ -79,11 +84,15 @@ var DateFormatter;
          * @method userTimeAndFormat
          * @param {Date} date - Date time object in UTC
          * @param {string} format - User date time format
+         * @param {string} [local] - Local code to localize days and months
          * @returns {string} - Date time in string format
          */
-        DateConventer.prototype.userTimeAndFormat = function (date, format) {
-            var ut = this.userTime(date);
-            return moment(ut).format(this.dateFormat.convert(format));
+        DateConventer.prototype.userTimeAndFormat = function (date, format, local) {
+            var ut = this.userTime(date), actualDate = moment(ut);
+            if (local && local.length) {
+                actualDate.locale(local);
+            }
+            return actualDate.format(this.dateFormat.convert(format));
         };
         /**
          * Momentjs format for user - converts .NET format to momentjs one

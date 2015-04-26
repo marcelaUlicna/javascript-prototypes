@@ -89,10 +89,10 @@
                     $("#culture").text(User.Culture);
                     $("#timezone").text(User.Timezone);
                     $("#offset").text(User.OffsetHours);
-                    $("#longDate").text("(" + User.LongDate + ")  " + formatConventer.userTimeAndFormat(date, User.LongDate));
-                    $("#longTime").text("(" + User.LongTime + ")  " + formatConventer.userTimeAndFormat(date, User.LongTime));
-                    $("#shortDate").text("(" + User.ShortDate + ")  " + formatConventer.userTimeAndFormat(date, User.ShortDate));
-                    $("#shortTime").text("(" + User.ShortTime + ")  " + formatConventer.userTimeAndFormat(date, User.ShortTime));
+                    $("#longDate").text("(" + User.LongDate + ")  " + formatConventer.userTimeAndFormat(date, User.LongDate, User.Culture));
+                    $("#longTime").text("(" + User.LongTime + ")  " + formatConventer.userTimeAndFormat(date, User.LongTime, User.Culture));
+                    $("#shortDate").text("(" + User.ShortDate + ")  " + formatConventer.userTimeAndFormat(date, User.ShortDate, User.Culture));
+                    $("#shortTime").text("(" + User.ShortTime + ")  " + formatConventer.userTimeAndFormat(date, User.ShortTime, User.Culture));
 
                     $('#datetimepicker4').datetimepicker().data().DateTimePicker.destroy();
                     $('#datetimepicker4').val("");
