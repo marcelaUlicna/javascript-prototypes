@@ -71,6 +71,7 @@ Returns moment format `string`.
 ```javascript
 <script src="lib/js/jquery-2.1.1.js"></script>
 <script src="lib/js/moment.js"></script>
+<script src="lib/js/moment-with-locales.js"></script> <!--optional-->
 <script src="dist/dateformat.js"></script>
 ```
 
@@ -89,4 +90,11 @@ var localDate = formatConventer.userTime(date);
     // => Tue Mar 17 2015 02:41:00 GMT-0800 (Pacific Standard Time)
 var localStringDate = formatConventer.userTimeAndFormat(date, dotnetFormat) 
     // => "Tuesday, March 17, 2015 2:41:00 AM"
+```
+
+* use moment locales - necessary to include moment-with-locales.js
+```javascript
+var spanishDotnetFormat = "dddd, d' de 'MMMM' de 'yyyy";
+var spanishDate = formatConventer.userTimeAndFormat(new Date(), spanishDotnetFormat, "es-ES")
+    // => domingo, 26 de abril de 2015
 ```
